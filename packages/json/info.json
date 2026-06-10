@@ -1,0 +1,29 @@
+{
+	"name": "Crazy Loading",
+	"total": 210,
+	"author": {
+		"name": "crazy-loading",
+		"url": "https://github.com/crazy-loading/crazy-loading"
+	},
+	"license": {
+		"title": "MIT",
+		"spdx": "MIT",
+		"url": "https://opensource.org/licenses/MIT"
+	},
+	"samples": [
+		"accretion-disk",
+		"action-principle",
+		"ampere-circulation",
+		"antenna-dipole",
+		"asteroid-belt",
+		"astroid-orbit"
+	],
+	"height": 24,
+	"category": "UI 24px",
+	"tags": [
+		"Contains Animations",
+		"Precise Shapes",
+		"Has Padding"
+	],
+	"palette": false
+}

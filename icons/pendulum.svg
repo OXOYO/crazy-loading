@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .pivot { fill: currentColor; }
+    .swing {
+      transform-origin: 12px 5px;
+      animation: swing 1.6s ease-in-out infinite;
+    }
+    .arm {
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+    }
+    .bob { fill: currentColor; }
+    @keyframes swing {
+      0%, 100% { transform: rotate(-28deg); }
+      50% { transform: rotate(28deg); }
+    }
+  </style>
+  <circle class="pivot" cx="12" cy="5" r="1.5"/>
+  <g class="swing">
+    <line class="arm" x1="12" y1="5" x2="12" y2="17"/>
+    <circle class="bob" cx="12" cy="17" r="2.5"/>
+  </g>
+</svg>

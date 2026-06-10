@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .barrier {
+      fill: currentColor;
+      opacity: 0.7;
+    }
+    .fringe {
+      fill: currentColor;
+      transform-origin: center center;
+      animation: fringe 1.6s ease-in-out infinite;
+    }
+    .f1 { animation-delay: 0s; }
+    .f2 { animation-delay: 0.2s; }
+    .f3 { animation-delay: 0.4s; }
+    .f4 { animation-delay: 0.6s; }
+    .f5 { animation-delay: 0.8s; }
+    @keyframes fringe {
+      0%, 100% { opacity: 0.2; transform: scaleY(0.5); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+  </style>
+  <rect class="barrier" x="4" y="4" width="2" height="6" rx="0.5"/>
+  <rect class="barrier" x="4" y="14" width="2" height="6" rx="0.5"/>
+  <rect class="fringe f1" x="10" y="6" width="1.5" height="12" rx="0.5"/>
+  <rect class="fringe f2" x="12.5" y="6" width="1.5" height="12" rx="0.5"/>
+  <rect class="fringe f3" x="15" y="6" width="1.5" height="12" rx="0.5"/>
+  <rect class="fringe f4" x="17.5" y="6" width="1.5" height="12" rx="0.5"/>
+  <rect class="fringe f5" x="20" y="6" width="1.5" height="12" rx="0.5"/>
+</svg>

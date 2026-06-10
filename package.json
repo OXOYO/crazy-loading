@@ -1,0 +1,32 @@
+{
+  "name": "crazy-loading",
+  "version": "0.1.0",
+  "private": true,
+  "description": "基于 Iconify 的数理主题 loading 图标集",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "playground"
+  ],
+  "scripts": {
+    "audit:icons": "tsx scripts/audit-catalog.ts",
+    "check:duplicates": "tsx scripts/find-duplicate-visuals.ts",
+    "check:clipping": "tsx scripts/audit-viewbox-clipping.ts",
+    "generate:icons": "tsx scripts/generate-icons.ts && tsx scripts/sync-icon-bodies.ts",
+    "sync:meta": "tsx scripts/sync-playground-meta.ts",
+    "build:icons": "tsx scripts/generate-icons.ts && tsx scripts/sync-playground-meta.ts && tsx scripts/sync-icon-bodies.ts && tsx scripts/build.ts",
+    "sync:bodies": "tsx scripts/sync-icon-bodies.ts",
+    "check:animation-loss": "tsx scripts/audit-iconify-animation-loss.ts",
+    "check:fidelity": "tsx scripts/audit-playground-fidelity.ts",
+    "dev": "npm run build:icons && npm run dev -w playground",
+    "build": "npm run build:icons && npm run build -w playground",
+    "preview": "npm run preview -w playground"
+  },
+  "devDependencies": {
+    "@iconify/tools": "^5.0.5",
+    "@iconify/types": "^2.0.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

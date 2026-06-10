@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.h{fill:none;stroke:currentColor;stroke-width:1.5;opacity:.45;animation:ex 2.5s ease-in-out infinite}@keyframes ex{0%,100%{transform:scale(.95)}50%{transform:scale(1.05)}}</style><circle cx="12" cy="12" r="2" fill="currentColor"/><circle class="h" cx="12" cy="12" r="9" style="transform-origin:12px 12px"/></svg>

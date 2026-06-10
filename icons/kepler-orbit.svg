@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .orbit {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.25;
+      opacity: 0.35;
+    }
+    .sun { fill: currentColor; }
+    .planet {
+      fill: currentColor;
+      animation: ellipse 2.4s linear infinite;
+    }
+    @keyframes ellipse {
+      0% { transform: translate(6px, 0); }
+      25% { transform: translate(0, 2.5px); }
+      50% { transform: translate(-6px, 0); }
+      75% { transform: translate(0, -2.5px); }
+      100% { transform: translate(6px, 0); }
+    }
+  </style>
+  <ellipse class="orbit" cx="12" cy="12" rx="8" ry="5"/>
+  <circle class="sun" cx="12" cy="12" r="2"/>
+  <circle class="planet" cx="18" cy="12" r="1.75"/>
+</svg>

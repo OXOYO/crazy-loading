@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .trail {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1;
+      opacity: 0.2;
+    }
+    .particle {
+      fill: currentColor;
+      animation: jitter 2.2s steps(1, end) infinite;
+    }
+    @keyframes jitter {
+      0% { transform: translate(12px, 12px); }
+      14% { transform: translate(14px, 10px); }
+      28% { transform: translate(11px, 14px); }
+      42% { transform: translate(15px, 13px); }
+      57% { transform: translate(10px, 11px); }
+      71% { transform: translate(13px, 15px); }
+      85% { transform: translate(9px, 13px); }
+      100% { transform: translate(12px, 12px); }
+    }
+  </style>
+  <path class="trail" d="M12 12l2-2-1 4 4-1-3 2 3 2-4-1 1 4-2-2"/>
+  <circle class="particle" cx="0" cy="0" r="2"/>
+</svg>

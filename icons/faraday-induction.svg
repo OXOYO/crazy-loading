@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><style>.l{fill:none;stroke:currentColor;stroke-width:1.5}.f{stroke-dasharray:20;animation:lp 2.5s linear infinite}@keyframes lp{0%{stroke-dashoffset:20}100%{stroke-dashoffset:-20}}</style><rect class="l" x="6" y="7" width="12" height="10" rx="1"/><path class="l f" d="M12 7v-3M12 17v3"/></svg>

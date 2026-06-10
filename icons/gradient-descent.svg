@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .bowl {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      opacity: 0.45;
+    }
+    .ball {
+      fill: currentColor;
+      animation: descend 2s ease-in-out infinite;
+    }
+    @keyframes descend {
+      0% { transform: translate(5px, 9px); }
+      35% { transform: translate(12px, 15px); }
+      55% { transform: translate(16px, 11px); }
+      75% { transform: translate(13px, 14px); }
+      100% { transform: translate(12px, 15px); }
+    }
+  </style>
+  <path class="bowl" d="M4 10c2 8 4 10 8 10s6-2 8-10"/>
+  <circle class="ball" cx="0" cy="0" r="2"/>
+</svg>

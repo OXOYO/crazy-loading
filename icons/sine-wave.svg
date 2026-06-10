@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .wave {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-dasharray: 32;
+      stroke-dashoffset: 32;
+      animation: draw 1.4s ease-in-out infinite;
+    }
+    .dot {
+      fill: currentColor;
+      animation: travel 1.4s ease-in-out infinite;
+    }
+    @keyframes draw {
+      0% { stroke-dashoffset: 32; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -32; }
+    }
+    @keyframes travel {
+      0% { transform: translate(3px, 12px); opacity: 0.4; }
+      50% { transform: translate(12px, 6px); opacity: 1; }
+      100% { transform: translate(21px, 12px); opacity: 0.4; }
+    }
+  </style>
+  <path class="wave" d="M3 12c2-6 4-6 6 0s4 6 6 0 4-6 6 0"/>
+  <circle class="dot" cx="0" cy="0" r="1.5"/>
+</svg>

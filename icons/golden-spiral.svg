@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .spiral {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-dasharray: 42;
+      stroke-dashoffset: 42;
+      animation: unwind 2s ease-in-out infinite;
+    }
+    .dot {
+      fill: currentColor;
+      animation: fade 2s ease-in-out infinite;
+    }
+    @keyframes unwind {
+      0% { stroke-dashoffset: 42; }
+      50% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -42; }
+    }
+    @keyframes fade {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+  <path class="spiral" d="M12 12c0-3 3-3 3 0s-5 5-8 2 1-9 8-6"/>
+  <circle class="dot" cx="18" cy="8" r="1.5"/>
+</svg>

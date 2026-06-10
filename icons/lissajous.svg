@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .curve {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      opacity: 0.35;
+    }
+    .dot {
+      fill: currentColor;
+      animation: orbit 2s linear infinite;
+      transform-origin: 12px 12px;
+    }
+    @keyframes orbit {
+      0% { transform: rotate(0deg) translate(7px) rotate(0deg); }
+      100% { transform: rotate(360deg) translate(7px) rotate(-360deg); }
+    }
+  </style>
+  <path class="curve" d="M12 5c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7"/>
+  <circle class="dot" cx="12" cy="12" r="2"/>
+</svg>

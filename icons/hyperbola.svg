@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <style>
+    .branch {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.75;
+      stroke-linecap: round;
+      stroke-dasharray: 24;
+      stroke-dashoffset: 24;
+      animation: reveal 2s ease-in-out infinite;
+    }
+    .asymptote {
+      stroke: currentColor;
+      stroke-width: 1;
+      opacity: 0.25;
+      stroke-dasharray: 2 2;
+    }
+    .dot {
+      fill: currentColor;
+      animation: climb 2s ease-in-out infinite;
+    }
+    @keyframes reveal {
+      0%, 100% { stroke-dashoffset: 24; }
+      50% { stroke-dashoffset: 0; }
+    }
+    @keyframes climb {
+      0% { transform: translate(16px, 18px); opacity: 0.35; }
+      50% { transform: translate(10px, 10px); opacity: 1; }
+      100% { transform: translate(7px, 7px); opacity: 0.35; }
+    }
+  </style>
+  <line class="asymptote" x1="6" y1="4" x2="20" y2="20"/>
+  <path class="branch" d="M16 18c-2-4-4-8-9-11"/>
+  <circle class="dot" cx="0" cy="0" r="1.5"/>
+</svg>
