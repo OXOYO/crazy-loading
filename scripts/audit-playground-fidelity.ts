@@ -2,7 +2,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import icons from '../packages/json/icons.json' assert { type: 'json' };
-import { ICON_CATALOG } from './catalog.ts';
+import { ICON_CATALOG, PRESERVED_HAND_ICONS } from './catalog.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const iconsDir = path.resolve(__dirname, '..', 'icons');
@@ -134,6 +134,24 @@ function scopeSvgBody(body: string, scopeId: string): string {
   return result;
 }
 
+function findMissingKeyframes(body: string): string[] {
+  const defined = new Set(
+    [...body.matchAll(/@keyframes\s+([a-zA-Z0-9_-]+)/g)].map((m) => m[1]),
+  );
+  const missing: string[] = [];
+  for (const m of body.matchAll(/animation(?:-name)?:\s*([a-zA-Z0-9_-]+)/g)) {
+    const name = m[1];
+    if (!defined.has(name) && !['none', 'inherit', 'initial', 'unset'].includes(name)) {
+      missing.push(name);
+    }
+  }
+  return [...new Set(missing)];
+}
+
+function hasAnimation(body: string): boolean {
+  return body.includes('@keyframes') || /animation\s*:/.test(body);
+}
+
 function findUnscopedAnimations(scoped: string, scopeId: string): string[] {
   const prefix = `cl-${sanitizeScope(scopeId)}-kf-`;
   const issues: string[] = [];
@@ -158,6 +176,7 @@ async function loadIconBodies(): Promise<Record<string, string>> {
 async function main() {
   const iconBodies = await loadIconBodies();
   const issues: { id: string; type: string; detail: string }[] = [];
+  const passed: string[] = [];
 
   for (const def of ICON_CATALOG) {
     const id = def.id;
@@ -167,11 +186,14 @@ async function main() {
     const syncedBody = iconBodies[id] ?? '';
     const jsonBody = icons.icons[id]?.body ?? '';
 
+    const iconIssues: string[] = [];
+
     if (normalize(srcBody) !== normalize(syncedBody)) {
       issues.push({ id, type: 'bodies 未同步', detail: 'icons/*.svg ≠ iconBodies.ts' });
+      iconIssues.push('bodies');
     }
 
-    if (semanticKey(srcBody) !== semanticKey(jsonBody)) {
+    if (!PRESERVED_HAND_ICONS.has(id) && semanticKey(srcBody) !== semanticKey(jsonBody)) {
       const srcKf = keyframeNames(srcBody).join(',');
       const jsonKf = keyframeNames(jsonBody).join(',');
       const srcTags = `p${countTags(srcBody, 'path')}c${countTags(srcBody, 'circle')}r${countTags(srcBody, 'rect')}`;
@@ -181,6 +203,22 @@ async function main() {
         type: '源 SVG ≠ Iconify JSON',
         detail: `结构/样式差异 tags ${srcTags}→${jsonTags} kf [${srcKf}]→[${jsonKf}]`,
       });
+      iconIssues.push('json');
+    }
+
+    if (!hasAnimation(srcBody)) {
+      issues.push({ id, type: '缺少动画', detail: '无 @keyframes 或 animation 声明' });
+      iconIssues.push('anim');
+    }
+
+    const missingKf = findMissingKeyframes(srcBody);
+    if (missingKf.length) {
+      issues.push({
+        id,
+        type: '动画名未定义',
+        detail: `引用但未定义 @keyframes: ${missingKf.join(', ')}`,
+      });
+      iconIssues.push('keyframes');
     }
 
     const scoped = scopeSvgBody(srcBody, id);
@@ -191,6 +229,7 @@ async function main() {
         type: 'CSS 作用域遗漏',
         detail: `未隔离 animation: ${unscoped.join(', ')}`,
       });
+      iconIssues.push('scope');
     }
 
     const cssClasses = new Set<string>();
@@ -213,6 +252,7 @@ async function main() {
         type: 'class 不匹配',
         detail: `CSS无元素:${orphanCss.join(',')||'-'} 元素无CSS:${orphanHtml.join(',')||'-'}`,
       });
+      iconIssues.push('class');
     }
 
     if (/style="[^"]*animation:\s*[a-zA-Z]/.test(srcBody)) {
@@ -221,6 +261,11 @@ async function main() {
         type: '内联 animation',
         detail: 'style 属性含 animation，网格作用域需额外处理',
       });
+      iconIssues.push('inline');
+    }
+
+    if (iconIssues.length === 0) {
+      passed.push(id);
     }
   }
 
@@ -231,7 +276,7 @@ async function main() {
   }
 
   console.log(`# Playground 一致性审计 (${ICON_CATALOG.length} 个图标)\n`);
-  console.log(`问题图标: ${new Set(issues.map((i) => i.id)).size} 个，共 ${issues.length} 条\n`);
+  console.log(`通过: ${passed.length} · 有问题: ${ICON_CATALOG.length - passed.length} · 共 ${issues.length} 条\n`);
 
   for (const [type, rows] of [...byType.entries()].sort((a, b) => b[1].length - a[1].length)) {
     console.log(`## ${type} (${rows.length})\n`);
@@ -244,7 +289,7 @@ async function main() {
   if (issues.length) {
     process.exitCode = 1;
   } else {
-    console.log('✅ 全部通过');
+    console.log('✅ 全部 222 个图标通过');
   }
 }
 

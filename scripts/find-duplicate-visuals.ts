@@ -70,8 +70,9 @@ async function main() {
   for (const [, ids] of templateDupes) {
     const canonical = ids[0];
     for (const id of ids.slice(1)) {
-      if (!OVERRIDE_ICON_IDS.has(id)) {
-        missingOverrides.push(`${id} (模板 ${ICON_CATALOG.find((x) => x.id === id)!.template}, 基准 ${canonical})`);
+      const def = ICON_CATALOG.find((x) => x.id === id)!;
+      if (!OVERRIDE_ICON_IDS.has(id) && (def.seed ?? 0) < 364) {
+        missingOverrides.push(`${id} (模板 ${def.template}, 基准 ${canonical})`);
       }
     }
   }

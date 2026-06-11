@@ -16,6 +16,13 @@ export const CATEGORIES = [
   { id: 'astronomy', label: '天文学' },
   { id: 'aerospace', label: '航天' },
   { id: 'chaos', label: '混沌与分形' },
+  { id: 'sports', label: '运动' },
+  { id: 'biology', label: '生物' },
+  { id: 'cs', label: '计算机' },
+  { id: 'optics', label: '光学' },
+  { id: 'earth', label: '地球科学' },
+  { id: 'music', label: '音乐声学' },
+  { id: 'engineering', label: '工程' },
 ] as const;
 
 export type CategoryId = (typeof CATEGORIES)[number]['id'];

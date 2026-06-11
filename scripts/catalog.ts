@@ -1,6 +1,7 @@
 import type { IconCategory, IconDefinition, TemplateName } from './types.ts';
+import { EXPANSION_CATALOG } from './catalog-expansion.ts';
 
-// preserved 26 + qian-xuesen 1 + generated batch 173 + chemistry 10 = 210
+// preserved 26 + qian-xuesen 1 + generated batch 173 + chemistry 10 + extension 12 + sports 24 + expansion 254 = 500
 
 function icon(
   id: string,
@@ -331,6 +332,52 @@ const generated: IconDefinition[] = [
     ],
     300,
   ),
+  ...batch(
+    [
+      ['archimedes-spiral', '阿基米德螺线', 'r = aθ 等距螺旋展开', 'geometry', 'archimedes-spiral'],
+      ['trefoil-knot', '三叶结', '非平凡纽结闭路追踪', 'geometry', 'trefoil-knot'],
+      ['riemann-rectangles', '黎曼和', '矩形条带逐块逼近积分', 'calculus', 'riemann-rectangles'],
+      ['wheel-paradox', '轮子悖论', '同心轮同步滚动标记', 'mechanics', 'wheel-paradox'],
+      ['ladder-limit', '夹逼极限', '上下界阶梯夹逼收敛', 'calculus', 'ladder-limit'],
+      ['monte-carlo-hit', '蒙特卡洛 π', '随机投点圆内命中计数', 'statistics', 'monte-carlo-hit'],
+      ['redox-transfer', '氧化还原', '电子在物种间跃迁转移', 'chemistry', 'redox-transfer'],
+      ['titration-endpoint', '滴定终点', '等当点附近 pH 陡升', 'chemistry', 'titration-endpoint'],
+      ['nmr-flip', 'NMR 自旋翻转', '核磁自旋能级跃迁', 'chemistry', 'nmr-flip'],
+      ['reaction-diffusion', '反应扩散', '图灵斑图生成与消长', 'chemistry', 'reaction-diffusion'],
+      ['magnet-flip', '磁偶极翻转', '磁矩方向周期性反转', 'electromagnetism', 'magnet-flip'],
+      ['orbital-resonance', '轨道共振', '2:1 周期锁定对齐', 'astronomy', 'orbital-resonance'],
+    ],
+    320,
+  ),
+  ...batch(
+    [
+      ['sprint-dash', '短跑冲刺', '摆臂蹬腿交替加速', 'sports', 'sprint-runner'],
+      ['basketball-bounce', '篮球运球', '抛物线反弹节奏', 'sports', 'basketball-bounce'],
+      ['soccer-dribble', '足球盘带', '脚背触球推进', 'sports', 'soccer-dribble'],
+      ['swim-freestyle', '自由泳', '划水换气循环', 'sports', 'swim-crawl'],
+      ['cycle-sprint', '公路骑行', '双轮转动踏频', 'sports', 'cycle-road'],
+      ['tennis-volley', '网球截击', '球拍击球过网', 'sports', 'tennis-rally'],
+      ['ski-slalom', '滑雪回转', '旗门间 S 形滑降', 'sports', 'ski-slalom'],
+      ['jump-rope', '跳绳', '绳弧跳跃节奏', 'sports', 'jump-rope'],
+      ['yoga-tree-pose', '瑜伽树式', '单腿平衡微摆', 'sports', 'yoga-tree'],
+      ['boxing-jab', '拳击刺拳', '直拳出拳回收', 'sports', 'boxing-jab'],
+      ['archery-release', '射箭发射', '拉弓释箭飞行', 'sports', 'archery-aim'],
+      ['high-jump', '背越式跳高', '过杆抛物弧线', 'sports', 'high-jump-bar'],
+      ['hurdle-race', '跨栏冲刺', '助跑起跳越栏落地', 'sports', 'hurdle-sprint'],
+      ['pole-vault', '撑竿跳', '持竿插地过杆下坠', 'sports', 'pole-vault'],
+      ['javelin-throw', '标枪投掷', '助跑引臂掷枪飞行', 'sports', 'javelin-throw'],
+      ['shot-put', '铅球投掷', '旋转推掷铅球抛物', 'sports', 'shot-put'],
+      ['hammer-throw', '链球投掷', '旋转甩链球离手', 'sports', 'hammer-throw'],
+      ['triple-jump', '三级跳远', '单脚跳跨步跳远', 'sports', 'triple-jump'],
+      ['weightlift', '举重挺举', '深蹲起杠过头', 'sports', 'weightlift'],
+      ['volleyball-spike', '排球扣球', '助跑起跳扣球过网', 'sports', 'volleyball-spike'],
+      ['dive-springboard', '跳板跳水', '起跳翻腾入水', 'sports', 'dive-board'],
+      ['fencing-lunge', '击剑弓步', '弓步突刺回收', 'sports', 'fence-lunge'],
+      ['skateboard-ollie', '滑板腾跃', '踩板起跳落地', 'sports', 'skate-ollie'],
+      ['rowing-stroke', '赛艇划桨', '抓水拉桨回桨', 'sports', 'row-stroke'],
+    ],
+    340,
+  ),
 ];
 
 const CATALOG_FIXES: Partial<
@@ -470,10 +517,11 @@ function applyCatalogFixes(catalog: IconDefinition[]): IconDefinition[] {
 export const ICON_CATALOG: IconDefinition[] = applyCatalogFixes([
   ...preserved,
   ...generated,
+  ...EXPANSION_CATALOG,
 ]);
 
-if (ICON_CATALOG.length !== 210) {
-  throw new Error(`ICON_CATALOG must contain 210 icons, got ${ICON_CATALOG.length}`);
+if (ICON_CATALOG.length !== 500) {
+  throw new Error(`ICON_CATALOG must contain 500 icons, got ${ICON_CATALOG.length}`);
 }
 
 export const PRESERVED_HAND_ICONS = PRESERVED_IDS;

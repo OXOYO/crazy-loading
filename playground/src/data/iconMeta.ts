@@ -1052,6 +1052,1456 @@ export const ICON_META: Record<string, Omit<IconMeta, 'name'>> = {
     description: '勒夏特列原理双向移动',
     category: 'chemistry',
   },
+  'archimedes-spiral': {
+    title: '阿基米德螺线',
+    description: 'r = aθ 等距螺旋展开',
+    category: 'geometry',
+  },
+  'trefoil-knot': {
+    title: '三叶结',
+    description: '非平凡纽结闭路追踪',
+    category: 'geometry',
+  },
+  'riemann-rectangles': {
+    title: '黎曼和',
+    description: '矩形条带逐块逼近积分',
+    category: 'calculus',
+  },
+  'wheel-paradox': {
+    title: '轮子悖论',
+    description: '同心轮同步滚动标记',
+    category: 'mechanics',
+  },
+  'ladder-limit': {
+    title: '夹逼极限',
+    description: '上下界阶梯夹逼收敛',
+    category: 'calculus',
+  },
+  'monte-carlo-hit': {
+    title: '蒙特卡洛 π',
+    description: '随机投点圆内命中计数',
+    category: 'statistics',
+  },
+  'redox-transfer': {
+    title: '氧化还原',
+    description: '电子在物种间跃迁转移',
+    category: 'chemistry',
+  },
+  'titration-endpoint': {
+    title: '滴定终点',
+    description: '等当点附近 pH 陡升',
+    category: 'chemistry',
+  },
+  'nmr-flip': {
+    title: 'NMR 自旋翻转',
+    description: '核磁自旋能级跃迁',
+    category: 'chemistry',
+  },
+  'reaction-diffusion': {
+    title: '反应扩散',
+    description: '图灵斑图生成与消长',
+    category: 'chemistry',
+  },
+  'magnet-flip': {
+    title: '磁偶极翻转',
+    description: '磁矩方向周期性反转',
+    category: 'electromagnetism',
+  },
+  'orbital-resonance': {
+    title: '轨道共振',
+    description: '2:1 周期锁定对齐',
+    category: 'astronomy',
+  },
+  'sprint-dash': {
+    title: '短跑冲刺',
+    description: '摆臂蹬腿交替加速',
+    category: 'sports',
+  },
+  'basketball-bounce': {
+    title: '篮球运球',
+    description: '抛物线反弹节奏',
+    category: 'sports',
+  },
+  'soccer-dribble': {
+    title: '足球盘带',
+    description: '脚背触球推进',
+    category: 'sports',
+  },
+  'swim-freestyle': {
+    title: '自由泳',
+    description: '划水换气循环',
+    category: 'sports',
+  },
+  'cycle-sprint': {
+    title: '公路骑行',
+    description: '双轮转动踏频',
+    category: 'sports',
+  },
+  'tennis-volley': {
+    title: '网球截击',
+    description: '球拍击球过网',
+    category: 'sports',
+  },
+  'ski-slalom': {
+    title: '滑雪回转',
+    description: '旗门间 S 形滑降',
+    category: 'sports',
+  },
+  'jump-rope': {
+    title: '跳绳',
+    description: '绳弧跳跃节奏',
+    category: 'sports',
+  },
+  'yoga-tree-pose': {
+    title: '瑜伽树式',
+    description: '单腿平衡微摆',
+    category: 'sports',
+  },
+  'boxing-jab': {
+    title: '拳击刺拳',
+    description: '直拳出拳回收',
+    category: 'sports',
+  },
+  'archery-release': {
+    title: '射箭发射',
+    description: '拉弓释箭飞行',
+    category: 'sports',
+  },
+  'high-jump': {
+    title: '背越式跳高',
+    description: '过杆抛物弧线',
+    category: 'sports',
+  },
+  'hurdle-race': {
+    title: '跨栏冲刺',
+    description: '助跑起跳越栏落地',
+    category: 'sports',
+  },
+  'pole-vault': {
+    title: '撑竿跳',
+    description: '持竿插地过杆下坠',
+    category: 'sports',
+  },
+  'javelin-throw': {
+    title: '标枪投掷',
+    description: '助跑引臂掷枪飞行',
+    category: 'sports',
+  },
+  'shot-put': {
+    title: '铅球投掷',
+    description: '旋转推掷铅球抛物',
+    category: 'sports',
+  },
+  'hammer-throw': {
+    title: '链球投掷',
+    description: '旋转甩链球离手',
+    category: 'sports',
+  },
+  'triple-jump': {
+    title: '三级跳远',
+    description: '单脚跳跨步跳远',
+    category: 'sports',
+  },
+  'weightlift': {
+    title: '举重挺举',
+    description: '深蹲起杠过头',
+    category: 'sports',
+  },
+  'volleyball-spike': {
+    title: '排球扣球',
+    description: '助跑起跳扣球过网',
+    category: 'sports',
+  },
+  'dive-springboard': {
+    title: '跳板跳水',
+    description: '起跳翻腾入水',
+    category: 'sports',
+  },
+  'fencing-lunge': {
+    title: '击剑弓步',
+    description: '弓步突刺回收',
+    category: 'sports',
+  },
+  'skateboard-ollie': {
+    title: '滑板腾跃',
+    description: '踩板起跳落地',
+    category: 'sports',
+  },
+  'rowing-stroke': {
+    title: '赛艇划桨',
+    description: '抓水拉桨回桨',
+    category: 'sports',
+  },
+  'dna-helix-1': {
+    title: 'DNA 双螺旋',
+    description: '碱基配对双链盘绕',
+    category: 'biology',
+  },
+  'dna-helix-2': {
+    title: '基因双链',
+    description: '碱基配对双链盘绕',
+    category: 'biology',
+  },
+  'dna-helix-3': {
+    title: '核酸螺旋',
+    description: '碱基配对双链盘绕',
+    category: 'biology',
+  },
+  'dna-replicate-1': {
+    title: 'DNA 复制',
+    description: '双链解旋逐段复制',
+    category: 'biology',
+  },
+  'dna-replicate-2': {
+    title: '半保留复制',
+    description: '双链解旋逐段复制',
+    category: 'biology',
+  },
+  'dna-replicate-3': {
+    title: '复制叉推进',
+    description: '双链解旋逐段复制',
+    category: 'biology',
+  },
+  'rna-transcribe-1': {
+    title: 'RNA 转录',
+    description: 'DNA 模板合成 RNA',
+    category: 'biology',
+  },
+  'rna-transcribe-2': {
+    title: 'mRNA 合成',
+    description: 'DNA 模板合成 RNA',
+    category: 'biology',
+  },
+  'rna-transcribe-3': {
+    title: '转录延伸',
+    description: 'DNA 模板合成 RNA',
+    category: 'biology',
+  },
+  'protein-fold-1': {
+    title: '蛋白质折叠',
+    description: '氨基酸链折叠成功能构象',
+    category: 'biology',
+  },
+  'protein-fold-2': {
+    title: '多肽折叠',
+    description: '氨基酸链折叠成功能构象',
+    category: 'biology',
+  },
+  'protein-fold-3': {
+    title: '结构域形成',
+    description: '氨基酸链折叠成功能构象',
+    category: 'biology',
+  },
+  'cell-membrane-1': {
+    title: '细胞膜通道',
+    description: '膜蛋白通道开闭转运',
+    category: 'biology',
+  },
+  'cell-membrane-2': {
+    title: '离子通道',
+    description: '膜蛋白通道开闭转运',
+    category: 'biology',
+  },
+  'cell-membrane-3': {
+    title: '膜运输',
+    description: '膜蛋白通道开闭转运',
+    category: 'biology',
+  },
+  'photosynthesis-1': {
+    title: '光合作用',
+    description: '光能转化学能循环',
+    category: 'biology',
+  },
+  'photosynthesis-2': {
+    title: '光反应',
+    description: '光能转化学能循环',
+    category: 'biology',
+  },
+  'photosynthesis-3': {
+    title: '碳固定',
+    description: '光能转化学能循环',
+    category: 'biology',
+  },
+  'neuron-pulse-1': {
+    title: '动作电位',
+    description: '膜电位去极化复极化',
+    category: 'biology',
+  },
+  'neuron-pulse-2': {
+    title: '神经冲动',
+    description: '膜电位去极化复极化',
+    category: 'biology',
+  },
+  'neuron-pulse-3': {
+    title: '轴突传导',
+    description: '膜电位去极化复极化',
+    category: 'biology',
+  },
+  'heartbeat-ecg-1': {
+    title: '心电图',
+    description: '心电 QRS 周期性搏动',
+    category: 'biology',
+  },
+  'heartbeat-ecg-2': {
+    title: '心室收缩',
+    description: '心电 QRS 周期性搏动',
+    category: 'biology',
+  },
+  'heartbeat-ecg-3': {
+    title: '脉搏节律',
+    description: '心电 QRS 周期性搏动',
+    category: 'biology',
+  },
+  'mitosis-1': {
+    title: '有丝分裂',
+    description: '细胞分裂周期推进',
+    category: 'biology',
+  },
+  'mitosis-2': {
+    title: '染色体分离',
+    description: '细胞分裂周期推进',
+    category: 'biology',
+  },
+  'mitosis-3': {
+    title: '胞质分裂',
+    description: '细胞分裂周期推进',
+    category: 'biology',
+  },
+  'virus-infect-1': {
+    title: '病毒感染',
+    description: '病毒附着穿入复制',
+    category: 'biology',
+  },
+  'virus-infect-2': {
+    title: '病毒侵染',
+    description: '病毒附着穿入复制',
+    category: 'biology',
+  },
+  'virus-infect-3': {
+    title: '宿主入侵',
+    description: '病毒附着穿入复制',
+    category: 'biology',
+  },
+  'enzyme-bind-1': {
+    title: '酶促反应',
+    description: '锁钥结合降低能垒',
+    category: 'biology',
+  },
+  'enzyme-bind-2': {
+    title: '酶底物复合',
+    description: '锁钥结合降低能垒',
+    category: 'biology',
+  },
+  'enzyme-bind-3': {
+    title: '催化循环',
+    description: '锁钥结合降低能垒',
+    category: 'biology',
+  },
+  'blood-flow-1': {
+    title: '血液循环',
+    description: '心脏泵血循环全身',
+    category: 'biology',
+  },
+  'blood-flow-2': {
+    title: '动脉血流',
+    description: '心脏泵血循环全身',
+    category: 'biology',
+  },
+  'blood-flow-3': {
+    title: '毛细血管交换',
+    description: '心脏泵血循环全身',
+    category: 'biology',
+  },
+  'muscle-contract-1': {
+    title: '肌肉收缩',
+    description: '肌动肌球蛋白相对滑动',
+    category: 'biology',
+  },
+  'muscle-contract-2': {
+    title: '肌丝滑行',
+    description: '肌动肌球蛋白相对滑动',
+    category: 'biology',
+  },
+  'muscle-contract-3': {
+    title: '肌节缩短',
+    description: '肌动肌球蛋白相对滑动',
+    category: 'biology',
+  },
+  'bacteria-divide-1': {
+    title: '细菌分裂',
+    description: '原核细胞一分为二',
+    category: 'biology',
+  },
+  'bacteria-divide-2': {
+    title: '二分裂',
+    description: '原核细胞一分为二',
+    category: 'biology',
+  },
+  'bacteria-divide-3': {
+    title: '菌群增殖',
+    description: '原核细胞一分为二',
+    category: 'biology',
+  },
+  'osmosis-1': {
+    title: '渗透作用',
+    description: '水沿浓度梯度跨膜',
+    category: 'biology',
+  },
+  'osmosis-2': {
+    title: '水分子跨膜',
+    description: '水沿浓度梯度跨膜',
+    category: 'biology',
+  },
+  'osmosis-3': {
+    title: '渗透平衡',
+    description: '水沿浓度梯度跨膜',
+    category: 'biology',
+  },
+  'bubble-sort-1': {
+    title: '冒泡排序',
+    description: '相邻元素比较交换',
+    category: 'cs',
+  },
+  'bubble-sort-2': {
+    title: '相邻交换',
+    description: '相邻元素比较交换',
+    category: 'cs',
+  },
+  'bubble-sort-3': {
+    title: '冒泡上浮',
+    description: '相邻元素比较交换',
+    category: 'cs',
+  },
+  'binary-search-1': {
+    title: '二分查找',
+    description: '区间折半逼近目标',
+    category: 'cs',
+  },
+  'binary-search-2': {
+    title: '折半搜索',
+    description: '区间折半逼近目标',
+    category: 'cs',
+  },
+  'binary-search-3': {
+    title: '有序查找',
+    description: '区间折半逼近目标',
+    category: 'cs',
+  },
+  'bfs-expand-1': {
+    title: '广度优先',
+    description: '逐层扩展搜索前沿',
+    category: 'cs',
+  },
+  'bfs-expand-2': {
+    title: 'BFS 扩散',
+    description: '逐层扩展搜索前沿',
+    category: 'cs',
+  },
+  'bfs-expand-3': {
+    title: '层序遍历',
+    description: '逐层扩展搜索前沿',
+    category: 'cs',
+  },
+  'dfs-path-1': {
+    title: '深度优先',
+    description: '沿路径深入再回溯',
+    category: 'cs',
+  },
+  'dfs-path-2': {
+    title: 'DFS 回溯',
+    description: '沿路径深入再回溯',
+    category: 'cs',
+  },
+  'dfs-path-3': {
+    title: '栈式深入',
+    description: '沿路径深入再回溯',
+    category: 'cs',
+  },
+  'stack-push-1': {
+    title: '栈操作',
+    description: '元素压入弹出栈顶',
+    category: 'cs',
+  },
+  'stack-push-2': {
+    title: '压栈弹栈',
+    description: '元素压入弹出栈顶',
+    category: 'cs',
+  },
+  'stack-push-3': {
+    title: '后进先出',
+    description: '元素压入弹出栈顶',
+    category: 'cs',
+  },
+  'queue-flow-1': {
+    title: '队列操作',
+    description: '队尾入队队首出队',
+    category: 'cs',
+  },
+  'queue-flow-2': {
+    title: '入队出队',
+    description: '队尾入队队首出队',
+    category: 'cs',
+  },
+  'queue-flow-3': {
+    title: '先进先出',
+    description: '队尾入队队首出队',
+    category: 'cs',
+  },
+  'hash-chain-1': {
+    title: '哈希表',
+    description: '桶内链表处理冲突',
+    category: 'cs',
+  },
+  'hash-chain-2': {
+    title: '链地址法',
+    description: '桶内链表处理冲突',
+    category: 'cs',
+  },
+  'hash-chain-3': {
+    title: '冲突消解',
+    description: '桶内链表处理冲突',
+    category: 'cs',
+  },
+  'recursion-tree-1': {
+    title: '递归树',
+    description: '递归调用树形展开',
+    category: 'cs',
+  },
+  'recursion-tree-2': {
+    title: '分治递归',
+    description: '递归调用树形展开',
+    category: 'cs',
+  },
+  'recursion-tree-3': {
+    title: '调用栈展开',
+    description: '递归调用树形展开',
+    category: 'cs',
+  },
+  'heapify-1': {
+    title: '堆化',
+    description: '节点下沉上浮维护堆',
+    category: 'cs',
+  },
+  'heapify-2': {
+    title: '优先队列',
+    description: '节点下沉上浮维护堆',
+    category: 'cs',
+  },
+  'heapify-3': {
+    title: '堆调整',
+    description: '节点下沉上浮维护堆',
+    category: 'cs',
+  },
+  'graph-edge-1': {
+    title: '图遍历',
+    description: '边权逐步松弛更新',
+    category: 'cs',
+  },
+  'graph-edge-2': {
+    title: '边松弛',
+    description: '边权逐步松弛更新',
+    category: 'cs',
+  },
+  'graph-edge-3': {
+    title: '最短路径',
+    description: '边权逐步松弛更新',
+    category: 'cs',
+  },
+  'linked-list-1': {
+    title: '链表',
+    description: '节点指针串联遍历',
+    category: 'cs',
+  },
+  'linked-list-2': {
+    title: '指针链接',
+    description: '节点指针串联遍历',
+    category: 'cs',
+  },
+  'linked-list-3': {
+    title: '节点插入',
+    description: '节点指针串联遍历',
+    category: 'cs',
+  },
+  'cache-line-1': {
+    title: '缓存命中',
+    description: '命中与逐出交替',
+    category: 'cs',
+  },
+  'cache-line-2': {
+    title: 'LRU 替换',
+    description: '命中与逐出交替',
+    category: 'cs',
+  },
+  'cache-line-3': {
+    title: '缓存行',
+    description: '命中与逐出交替',
+    category: 'cs',
+  },
+  'neural-net-1': {
+    title: '神经网络',
+    description: '层间信号前向流动',
+    category: 'cs',
+  },
+  'neural-net-2': {
+    title: '前向传播',
+    description: '层间信号前向流动',
+    category: 'cs',
+  },
+  'neural-net-3': {
+    title: '反向梯度',
+    description: '层间信号前向流动',
+    category: 'cs',
+  },
+  'git-merge': {
+    title: 'Git 合并',
+    description: '分支合并提交',
+    category: 'cs',
+  },
+  'prism-1': {
+    title: '棱镜色散',
+    description: '不同波长折射角分离',
+    category: 'optics',
+  },
+  'prism-2': {
+    title: '白光色散',
+    description: '不同波长折射角分离',
+    category: 'optics',
+  },
+  'prism-3': {
+    title: '折射分光',
+    description: '不同波长折射角分离',
+    category: 'optics',
+  },
+  'grating-1': {
+    title: '光栅衍射',
+    description: '光栅多缝干涉图样',
+    category: 'optics',
+  },
+  'grating-2': {
+    title: '衍射条纹',
+    description: '光栅多缝干涉图样',
+    category: 'optics',
+  },
+  'grating-3': {
+    title: '夫琅禾费衍射',
+    description: '光栅多缝干涉图样',
+    category: 'optics',
+  },
+  'lens-1': {
+    title: '凸透镜',
+    description: '平行光汇聚于焦点',
+    category: 'optics',
+  },
+  'lens-2': {
+    title: '透镜成像',
+    description: '平行光汇聚于焦点',
+    category: 'optics',
+  },
+  'lens-3': {
+    title: '焦点汇聚',
+    description: '平行光汇聚于焦点',
+    category: 'optics',
+  },
+  'mirror-1': {
+    title: '凹面镜',
+    description: '反射光线汇聚',
+    category: 'optics',
+  },
+  'mirror-2': {
+    title: '反射聚焦',
+    description: '反射光线汇聚',
+    category: 'optics',
+  },
+  'mirror-3': {
+    title: '镜面成像',
+    description: '反射光线汇聚',
+    category: 'optics',
+  },
+  'polar-1': {
+    title: '偏振光',
+    description: '偏振方向选择性透过',
+    category: 'optics',
+  },
+  'polar-2': {
+    title: '偏振片旋转',
+    description: '偏振方向选择性透过',
+    category: 'optics',
+  },
+  'polar-3': {
+    title: '马吕斯定律',
+    description: '偏振方向选择性透过',
+    category: 'optics',
+  },
+  'laser-1': {
+    title: '激光腔',
+    description: '腔内光来回放大',
+    category: 'optics',
+  },
+  'laser-2': {
+    title: '受激辐射',
+    description: '腔内光来回放大',
+    category: 'optics',
+  },
+  'laser-3': {
+    title: '激光振荡',
+    description: '腔内光来回放大',
+    category: 'optics',
+  },
+  'fiber-1': {
+    title: '光纤传输',
+    description: '纤芯全反射导光',
+    category: 'optics',
+  },
+  'fiber-2': {
+    title: '全反射导光',
+    description: '纤芯全反射导光',
+    category: 'optics',
+  },
+  'fiber-3': {
+    title: '光导纤维',
+    description: '纤芯全反射导光',
+    category: 'optics',
+  },
+  'interf-ring-1': {
+    title: '等倾干涉',
+    description: '同心干涉环明暗',
+    category: 'optics',
+  },
+  'interf-ring-2': {
+    title: '牛顿环',
+    description: '同心干涉环明暗',
+    category: 'optics',
+  },
+  'interf-ring-3': {
+    title: '薄膜干涉',
+    description: '同心干涉环明暗',
+    category: 'optics',
+  },
+  'thin-film-1': {
+    title: '增透膜',
+    description: '膜厚控制反射相位',
+    category: 'optics',
+  },
+  'thin-film-2': {
+    title: '薄膜相位',
+    description: '膜厚控制反射相位',
+    category: 'optics',
+  },
+  'thin-film-3': {
+    title: '多层膜',
+    description: '膜厚控制反射相位',
+    category: 'optics',
+  },
+  'telescope': {
+    title: '望远镜',
+    description: '物镜像面组成像',
+    category: 'optics',
+  },
+  'hologram': {
+    title: '全息重建',
+    description: '参考光干涉重建',
+    category: 'optics',
+  },
+  'michelson-mirror': {
+    title: '迈克尔逊',
+    description: '分束干涉仪',
+    category: 'optics',
+  },
+  'plate-1': {
+    title: '板块俯冲',
+    description: '板块碰撞俯冲消减',
+    category: 'earth',
+  },
+  'plate-2': {
+    title: '俯冲带',
+    description: '板块碰撞俯冲消减',
+    category: 'earth',
+  },
+  'plate-3': {
+    title: '大洋板块',
+    description: '板块碰撞俯冲消减',
+    category: 'earth',
+  },
+  'volcano-1': {
+    title: '火山喷发',
+    description: '岩浆喷出与碎屑',
+    category: 'earth',
+  },
+  'volcano-2': {
+    title: '岩浆喷发',
+    description: '岩浆喷出与碎屑',
+    category: 'earth',
+  },
+  'volcano-3': {
+    title: '火山口',
+    description: '岩浆喷出与碎屑',
+    category: 'earth',
+  },
+  'seismic-1': {
+    title: '地震波',
+    description: '体波与面波传播',
+    category: 'earth',
+  },
+  'seismic-2': {
+    title: 'P 波传播',
+    description: '体波与面波传播',
+    category: 'earth',
+  },
+  'seismic-3': {
+    title: 'S 波横波',
+    description: '体波与面波传播',
+    category: 'earth',
+  },
+  'front-1': {
+    title: '冷锋过境',
+    description: '冷暖空气交界推进',
+    category: 'earth',
+  },
+  'front-2': {
+    title: '暖锋抬升',
+    description: '冷暖空气交界推进',
+    category: 'earth',
+  },
+  'front-3': {
+    title: '锋面雨带',
+    description: '冷暖空气交界推进',
+    category: 'earth',
+  },
+  'hurricane-1': {
+    title: '飓风眼',
+    description: '低压气旋旋转结构',
+    category: 'earth',
+  },
+  'hurricane-2': {
+    title: '气旋旋转',
+    description: '低压气旋旋转结构',
+    category: 'earth',
+  },
+  'hurricane-3': {
+    title: '台风涡旋',
+    description: '低压气旋旋转结构',
+    category: 'earth',
+  },
+  'ocean-1': {
+    title: '洋流环流',
+    description: '海水大规模环流',
+    category: 'earth',
+  },
+  'ocean-2': {
+    title: '赤道环流',
+    description: '海水大规模环流',
+    category: 'earth',
+  },
+  'ocean-3': {
+    title: '温盐环流',
+    description: '海水大规模环流',
+    category: 'earth',
+  },
+  'glacier-1': {
+    title: '冰川运动',
+    description: '重力驱动冰体缓慢流动',
+    category: 'earth',
+  },
+  'glacier-2': {
+    title: '冰河推进',
+    description: '重力驱动冰体缓慢流动',
+    category: 'earth',
+  },
+  'glacier-3': {
+    title: '冰舌延伸',
+    description: '重力驱动冰体缓慢流动',
+    category: 'earth',
+  },
+  'season-1': {
+    title: '四季成因',
+    description: '地轴倾角导致季节',
+    category: 'earth',
+  },
+  'season-2': {
+    title: '地轴倾斜',
+    description: '地轴倾角导致季节',
+    category: 'earth',
+  },
+  'season-3': {
+    title: '日照变化',
+    description: '地轴倾角导致季节',
+    category: 'earth',
+  },
+  'fault-1': {
+    title: '断层滑动',
+    description: '岩层沿断层面错动',
+    category: 'earth',
+  },
+  'fault-2': {
+    title: '走滑断层',
+    description: '岩层沿断层面错动',
+    category: 'earth',
+  },
+  'fault-3': {
+    title: '地震断层',
+    description: '岩层沿断层面错动',
+    category: 'earth',
+  },
+  'groundwater': {
+    title: '地下水',
+    description: '含水层渗透',
+    category: 'earth',
+  },
+  'watershed': {
+    title: '流域汇流',
+    description: '降水地表汇流',
+    category: 'earth',
+  },
+  'metronome-1': {
+    title: '节拍器',
+    description: '摆锤左右稳定节拍',
+    category: 'music',
+  },
+  'metronome-2': {
+    title: '稳定节拍',
+    description: '摆锤左右稳定节拍',
+    category: 'music',
+  },
+  'metronome-3': {
+    title: '节奏器',
+    description: '摆锤左右稳定节拍',
+    category: 'music',
+  },
+  'string-harm-1': {
+    title: '弦乐泛音',
+    description: '弦上驻波与泛音列',
+    category: 'music',
+  },
+  'string-harm-2': {
+    title: '驻波泛音',
+    description: '弦上驻波与泛音列',
+    category: 'music',
+  },
+  'string-harm-3': {
+    title: '弦振动',
+    description: '弦上驻波与泛音列',
+    category: 'music',
+  },
+  'drum-1': {
+    title: '鼓点节奏',
+    description: '周期性敲击脉冲',
+    category: 'music',
+  },
+  'drum-2': {
+    title: '打击节拍',
+    description: '周期性敲击脉冲',
+    category: 'music',
+  },
+  'drum-3': {
+    title: '底鼓脉冲',
+    description: '周期性敲击脉冲',
+    category: 'music',
+  },
+  'tube-1': {
+    title: '管乐共振',
+    description: '管中驻波共振模',
+    category: 'music',
+  },
+  'tube-2': {
+    title: '开管闭管',
+    description: '管中驻波共振模',
+    category: 'music',
+  },
+  'tube-3': {
+    title: '气柱共振',
+    description: '管中驻波共振模',
+    category: 'music',
+  },
+  'piano-1': {
+    title: '钢琴击弦',
+    description: '琴锤击弦发声',
+    category: 'music',
+  },
+  'piano-2': {
+    title: '琴键击弦',
+    description: '琴锤击弦发声',
+    category: 'music',
+  },
+  'piano-3': {
+    title: '锤击琴弦',
+    description: '琴锤击弦发声',
+    category: 'music',
+  },
+  'spectrum-1': {
+    title: '频谱瀑布',
+    description: '频率成分随时间分布',
+    category: 'music',
+  },
+  'spectrum-2': {
+    title: '频谱分析',
+    description: '频率成分随时间分布',
+    category: 'music',
+  },
+  'spectrum-3': {
+    title: '音色频谱',
+    description: '频率成分随时间分布',
+    category: 'music',
+  },
+  'vibrato-1': {
+    title: '揉弦颤音',
+    description: '音高周期性微扰',
+    category: 'music',
+  },
+  'vibrato-2': {
+    title: '音高颤动',
+    description: '音高周期性微扰',
+    category: 'music',
+  },
+  'vibrato-3': {
+    title: '颤音效果',
+    description: '音高周期性微扰',
+    category: 'music',
+  },
+  'beat-mix-1': {
+    title: '拍频合成',
+    description: '相近频率合成拍频',
+    category: 'music',
+  },
+  'beat-mix-2': {
+    title: '双音拍频',
+    description: '相近频率合成拍频',
+    category: 'music',
+  },
+  'beat-mix-3': {
+    title: '拍音',
+    description: '相近频率合成拍频',
+    category: 'music',
+  },
+  'conductor': {
+    title: '指挥棒',
+    description: '指挥挥拍',
+    category: 'music',
+  },
+  'four-bar-1': {
+    title: '四连杆',
+    description: '四杆闭环传动',
+    category: 'engineering',
+  },
+  'four-bar-2': {
+    title: '曲柄摇杆',
+    description: '四杆闭环传动',
+    category: 'engineering',
+  },
+  'four-bar-3': {
+    title: '连杆机构',
+    description: '四杆闭环传动',
+    category: 'engineering',
+  },
+  'cam-1': {
+    title: '凸轮机构',
+    description: '凸轮推动从动件',
+    category: 'engineering',
+  },
+  'cam-2': {
+    title: '凸轮从动',
+    description: '凸轮推动从动件',
+    category: 'engineering',
+  },
+  'cam-3': {
+    title: '轮廓传动',
+    description: '凸轮推动从动件',
+    category: 'engineering',
+  },
+  'piston-1': {
+    title: '活塞冲程',
+    description: '活塞往复四冲程',
+    category: 'engineering',
+  },
+  'piston-2': {
+    title: '内燃冲程',
+    description: '活塞往复四冲程',
+    category: 'engineering',
+  },
+  'piston-3': {
+    title: '往复运动',
+    description: '活塞往复四冲程',
+    category: 'engineering',
+  },
+  'gear-1': {
+    title: '齿轮传动',
+    description: '齿面啮合传递转速',
+    category: 'engineering',
+  },
+  'gear-2': {
+    title: '齿轮啮合',
+    description: '齿面啮合传递转速',
+    category: 'engineering',
+  },
+  'gear-3': {
+    title: '齿比传动',
+    description: '齿面啮合传递转速',
+    category: 'engineering',
+  },
+  'bridge-1': {
+    title: '桥梁振动',
+    description: '结构弯曲振动模态',
+    category: 'engineering',
+  },
+  'bridge-2': {
+    title: '悬索振动',
+    description: '结构弯曲振动模态',
+    category: 'engineering',
+  },
+  'bridge-3': {
+    title: '共振模态',
+    description: '结构弯曲振动模态',
+    category: 'engineering',
+  },
+  'crane-1': {
+    title: '塔吊回转',
+    description: '起重臂回转吊运',
+    category: 'engineering',
+  },
+  'crane-2': {
+    title: '起重臂',
+    description: '起重臂回转吊运',
+    category: 'engineering',
+  },
+  'crane-3': {
+    title: '吊装回转',
+    description: '起重臂回转吊运',
+    category: 'engineering',
+  },
+  'conveyor-1': {
+    title: '传送带',
+    description: '皮带连续输送物料',
+    category: 'engineering',
+  },
+  'conveyor-2': {
+    title: '皮带输送',
+    description: '皮带连续输送物料',
+    category: 'engineering',
+  },
+  'conveyor-3': {
+    title: '物料输送',
+    description: '皮带连续输送物料',
+    category: 'engineering',
+  },
+  'turbine-1': {
+    title: '涡轮叶片',
+    description: '流体推动叶轮旋转',
+    category: 'engineering',
+  },
+  'turbine-2': {
+    title: '叶轮旋转',
+    description: '流体推动叶轮旋转',
+    category: 'engineering',
+  },
+  'turbine-3': {
+    title: '水轮机',
+    description: '流体推动叶轮旋转',
+    category: 'engineering',
+  },
+  'lever-pulley': {
+    title: '杠杆滑轮',
+    description: '滑轮组提升',
+    category: 'engineering',
+  },
+  'epsilon-delta': {
+    title: 'ε-δ 定义',
+    description: '极限严格定义',
+    category: 'calculus',
+  },
+  'rolle-theorem': {
+    title: '罗尔定理',
+    description: '区间内存在水平切线',
+    category: 'calculus',
+  },
+  'mean-value': {
+    title: '拉格朗日中值',
+    description: '区间内存在平行切线',
+    category: 'calculus',
+  },
+  'improper-integral': {
+    title: '反常积分',
+    description: '无穷区间积分收敛',
+    category: 'calculus',
+  },
+  'parametric-curve': {
+    title: '参数曲线',
+    description: 'x(t),y(t) 参数运动（动画示意）',
+    category: 'calculus',
+  },
+  'unit-circle-trig': {
+    title: '单位圆三角',
+    description: '三角函数单位圆定义',
+    category: 'trigonometry',
+  },
+  'arcsin-wave': {
+    title: '反正弦',
+    description: 'arcsin 定义域映射（动画示意）',
+    category: 'trigonometry',
+  },
+  'arccos-wave': {
+    title: '反余弦',
+    description: 'arccos 值域映射',
+    category: 'trigonometry',
+  },
+  'tan-asymptote': {
+    title: '正切渐近线',
+    description: 'tan 奇点竖渐近',
+    category: 'trigonometry',
+  },
+  'cot-period': {
+    title: '余切周期',
+    description: 'cot 周期振荡（动画示意）',
+    category: 'trigonometry',
+  },
+  'sec-amplify': {
+    title: '正割放大',
+    description: 'sec 振幅放大',
+    category: 'trigonometry',
+  },
+  'csc-inverse': {
+    title: '余割倒数',
+    description: 'csc 与 sin 倒数（动画示意）',
+    category: 'trigonometry',
+  },
+  'half-angle': {
+    title: '半角公式',
+    description: 'sin(θ/2) 恒等变换',
+    category: 'trigonometry',
+  },
+  'sum-formula': {
+    title: '和差公式',
+    description: 'sin(a±b) 展开（动画示意）',
+    category: 'trigonometry',
+  },
+  'desargues': {
+    title: '德萨格定理',
+    description: '透视三角形共线（动画示意）',
+    category: 'geometry',
+  },
+  'penrose-tile': {
+    title: '彭罗斯镶嵌',
+    description: '非周期镶嵌铺砌',
+    category: 'geometry',
+  },
+  'delone-tri': {
+    title: 'Delaunay 三角',
+    description: '空圆三角剖分',
+    category: 'geometry',
+  },
+  'steiner-tree': {
+    title: '斯坦纳树',
+    description: '最短连接网络（动画示意）',
+    category: 'geometry',
+  },
+  'fractal-tree': {
+    title: '分形树',
+    description: '递归分支生长（动画示意）',
+    category: 'geometry',
+  },
+  'tessellation': {
+    title: '平面镶嵌',
+    description: '对称群平铺（动画示意）',
+    category: 'geometry',
+  },
+  'sn1-reaction': {
+    title: 'SN1 取代',
+    description: '单分子亲核取代',
+    category: 'chemistry',
+  },
+  'sn2-reaction': {
+    title: 'SN2 取代',
+    description: '双分子背面进攻',
+    category: 'chemistry',
+  },
+  'esterification': {
+    title: '酯化反应',
+    description: '酸醇脱水成酯',
+    category: 'chemistry',
+  },
+  'hydrolysis': {
+    title: '水解反应',
+    description: '键断裂加水',
+    category: 'chemistry',
+  },
+  'polymer-chain': {
+    title: '聚合反应',
+    description: '单体链式增长',
+    category: 'chemistry',
+  },
+  'catalyst-surface': {
+    title: '催化表面',
+    description: '吸附活化脱附',
+    category: 'chemistry',
+  },
+  'ph-indicator': {
+    title: 'pH 指示剂',
+    description: '酸碱变色范围',
+    category: 'chemistry',
+  },
+  'galvanic-cell': {
+    title: '原电池',
+    description: '自发氧化还原电流',
+    category: 'chemistry',
+  },
+  'electrolysis-cell': {
+    title: '电解池',
+    description: '外加电压驱动',
+    category: 'chemistry',
+  },
+  'chromatography': {
+    title: '色谱分离',
+    description: '组分沿柱洗脱',
+    category: 'chemistry',
+  },
+  'mass-spec': {
+    title: '质谱扫描',
+    description: 'm/z 峰扫描',
+    category: 'chemistry',
+  },
+  'ir-spectrum': {
+    title: '红外光谱',
+    description: '键振动吸收峰（动画示意）',
+    category: 'chemistry',
+  },
+  'wormhole': {
+    title: '虫洞',
+    description: '时空短程连接',
+    category: 'relativity',
+  },
+  'cosmological-constant': {
+    title: '宇宙学常数',
+    description: '加速膨胀驱动',
+    category: 'relativity',
+  },
+  'gravitational-redshift': {
+    title: '引力红移',
+    description: '光子爬出势阱变红（动画示意）',
+    category: 'relativity',
+  },
+  'shapiro-delay': {
+    title: '夏皮罗延迟',
+    description: '光线引力场延迟',
+    category: 'relativity',
+  },
+  'ergosphere': {
+    title: '能层',
+    description: '克尔黑洞能层（动画示意）',
+    category: 'relativity',
+  },
+  'penrose-process': {
+    title: '彭罗斯过程',
+    description: '能层能量提取（动画示意）',
+    category: 'relativity',
+  },
+  'alcubierre': {
+    title: '阿库别里驱动',
+    description: '曲率驱动气泡（动画示意）',
+    category: 'relativity',
+  },
+  'blandford-znajek': {
+    title: 'BZ 过程',
+    description: '黑洞磁场能量提取',
+    category: 'relativity',
+  },
+  'naked-singularity': {
+    title: '裸奇点',
+    description: '无视界奇点（动画示意）',
+    category: 'relativity',
+  },
+  'ads-cft': {
+    title: 'AdS/CFT',
+    description: '体边界对偶（动画示意）',
+    category: 'relativity',
+  },
+  'exoplanet-transit': {
+    title: '系外行星凌日',
+    description: '亮度周期性下降（动画示意）',
+    category: 'astronomy',
+  },
+  'habitable-zone': {
+    title: '宜居带',
+    description: '液态水轨道带（动画示意）',
+    category: 'astronomy',
+  },
+  'tidal-heating': {
+    title: '潮汐加热',
+    description: '椭圆轨道摩擦生热',
+    category: 'astronomy',
+  },
+  'ring-resonance': {
+    title: '环系共振',
+    description: '牧羊卫星共振',
+    category: 'astronomy',
+  },
+  'stellar-wind-bubble': {
+    title: '恒星风泡',
+    description: '星风吹出泡状结构',
+    category: 'astronomy',
+  },
+  'planetary-migration': {
+    title: '行星迁移',
+    description: '盘力轨道内移（动画示意）',
+    category: 'astronomy',
+  },
+  'dust-disk': {
+    title: '原行星盘',
+    description: '尘埃盘螺旋结构',
+    category: 'astronomy',
+  },
+  'microlensing': {
+    title: '微引力透镜',
+    description: '前景星放大背景',
+    category: 'astronomy',
+  },
+  'fast-radio-burst': {
+    title: '快速射电暴',
+    description: '毫秒射电爆发（动画示意）',
+    category: 'astronomy',
+  },
+  'pulsar-glitch': {
+    title: '脉冲星跳变',
+    description: '中子星转速突变',
+    category: 'astronomy',
+  },
+  'top-quark': {
+    title: '顶夸克',
+    description: '最重夸克衰变（动画示意）',
+    category: 'quantum',
+  },
+  'higgs-boson': {
+    title: '希格斯玻色子',
+    description: '质量赋予机制（动画示意）',
+    category: 'quantum',
+  },
+  'gluon-jet': {
+    title: '胶子喷注',
+    description: 'QCD 强子化喷流',
+    category: 'quantum',
+  },
+  'muon-g2': {
+    title: 'μ 子 g-2',
+    description: '反常磁矩进动',
+    category: 'quantum',
+  },
+  'anyon-braid': {
+    title: '任意子编织',
+    description: '拓扑量子统计',
+    category: 'quantum',
+  },
+  'majorana-zero': {
+    title: '马约拉纳零模',
+    description: '拓扑零能态（动画示意）',
+    category: 'quantum',
+  },
+  'quantum-dot': {
+    title: '量子点',
+    description: '受限能级跃迁（动画示意）',
+    category: 'quantum',
+  },
+  'superconduct-qubit': {
+    title: '超导量子比特',
+    description: '约瑟夫森结振荡',
+    category: 'quantum',
+  },
 };
 
 export function countIconsByCategory(
@@ -1075,6 +2525,13 @@ export function countIconsByCategory(
     astronomy: 0,
     aerospace: 0,
     chaos: 0,
+    sports: 0,
+    biology: 0,
+    cs: 0,
+    optics: 0,
+    earth: 0,
+    music: 0,
+    engineering: 0,
   };
 
   for (const name of icons) {

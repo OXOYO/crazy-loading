@@ -1,6 +1,6 @@
 {
 	"name": "Crazy Loading",
-	"total": 210,
+	"total": 500,
 	"author": {
 		"name": "crazy-loading",
 		"url": "https://github.com/crazy-loading/crazy-loading"
@@ -13,10 +13,10 @@
 	"samples": [
 		"accretion-disk",
 		"action-principle",
+		"ads-cft",
+		"alcubierre",
 		"ampere-circulation",
-		"antenna-dipole",
-		"asteroid-belt",
-		"astroid-orbit"
+		"antenna-dipole"
 	],
 	"height": 24,
 	"category": "UI 24px",
