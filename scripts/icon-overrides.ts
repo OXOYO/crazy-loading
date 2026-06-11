@@ -1,4 +1,5 @@
 import type { IconDefinition } from './types.ts';
+import { EXPANSION_OVERRIDE_BODIES } from './expansion-overrides.ts';
 
 function wrap(body: string): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">${body}</svg>`;
@@ -6,6 +7,7 @@ function wrap(body: string): string {
 
 /** 结构重复图标的独立视觉（canonical 保留原模板，其余走此覆盖） */
 const OVERRIDE_BODIES: Record<string, string> = {
+  ...EXPANSION_OVERRIDE_BODIES,
   'tsunami-wave':
     '<style>.w{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;animation:ru 2s linear infinite}@keyframes ru{0%{transform:translateX(-3px)}100%{transform:translateX(3px)}}</style><path class="w" d="M3 14 C6 12 10 12 13 14 S16 16 19 14"/>',
   'gradient-field':

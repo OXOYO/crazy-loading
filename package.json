@@ -18,8 +18,9 @@
     "build:icons": "tsx scripts/generate-icons.ts && tsx scripts/sync-playground-meta.ts && tsx scripts/sync-icon-bodies.ts && tsx scripts/build.ts",
     "sync:bodies": "tsx scripts/sync-icon-bodies.ts",
     "check:animation-loss": "tsx scripts/audit-iconify-animation-loss.ts",
+    "check:animation-duration": "tsx scripts/audit-animation-duration.ts",
     "check:fidelity": "tsx scripts/audit-playground-fidelity.ts",
-    "check:effects": "npm run check:duplicates && npm run check:clipping && npm run check:animation-loss && npm run check:fidelity",
+    "check:effects": "npm run check:duplicates && npm run check:clipping && npm run check:animation-duration && npm run check:animation-loss && npm run check:fidelity",
     "dev": "npm run build:icons && npm run dev -w playground",
     "build": "npm run build:icons && npm run build -w playground",
     "preview": "npm run preview -w playground"

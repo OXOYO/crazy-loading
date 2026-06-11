@@ -115,6 +115,11 @@ export function buildSvgFromBody(
     /(?<=(?:^|[;\s{]))stroke-width:\s*[\d.]+/g,
     `stroke-width: ${config.strokeWidth}`,
   );
+  // 兼容缺省单位的 animation 时长（如 `1.4 ease` → `1.4s ease`）
+  next = next.replace(
+    /animation:\s*([a-zA-Z0-9_-]+)\s+([\d.]+)(?!\s*s|\s*ms)\s+/g,
+    `animation: $1 ${config.duration}s `,
+  );
   next = next.replace(
     /animation:\s*([a-zA-Z0-9_-]+)\s+([\d.]+)s([^;}"']*)/g,
     (_match, name, _seconds, tail) => `animation: ${name} ${config.duration}s${tail}`,

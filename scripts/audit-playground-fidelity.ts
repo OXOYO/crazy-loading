@@ -289,7 +289,7 @@ async function main() {
   if (issues.length) {
     process.exitCode = 1;
   } else {
-    console.log('✅ 全部 222 个图标通过');
+    console.log(`✅ 全部 ${ICON_CATALOG.length} 个图标通过`);
   }
 }
 

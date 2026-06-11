@@ -1232,423 +1232,143 @@ export const ICON_META: Record<string, Omit<IconMeta, 'name'>> = {
     description: '抓水拉桨回桨',
     category: 'sports',
   },
-  'dna-helix-1': {
+  'dna-helix': {
     title: 'DNA 双螺旋',
     description: '碱基配对双链盘绕',
     category: 'biology',
   },
-  'dna-helix-2': {
-    title: '基因双链',
-    description: '碱基配对双链盘绕',
-    category: 'biology',
-  },
-  'dna-helix-3': {
-    title: '核酸螺旋',
-    description: '碱基配对双链盘绕',
-    category: 'biology',
-  },
-  'dna-replicate-1': {
+  'dna-replicate': {
     title: 'DNA 复制',
     description: '双链解旋逐段复制',
     category: 'biology',
   },
-  'dna-replicate-2': {
-    title: '半保留复制',
-    description: '双链解旋逐段复制',
-    category: 'biology',
-  },
-  'dna-replicate-3': {
-    title: '复制叉推进',
-    description: '双链解旋逐段复制',
-    category: 'biology',
-  },
-  'rna-transcribe-1': {
+  'rna-transcribe': {
     title: 'RNA 转录',
     description: 'DNA 模板合成 RNA',
     category: 'biology',
   },
-  'rna-transcribe-2': {
-    title: 'mRNA 合成',
-    description: 'DNA 模板合成 RNA',
-    category: 'biology',
-  },
-  'rna-transcribe-3': {
-    title: '转录延伸',
-    description: 'DNA 模板合成 RNA',
-    category: 'biology',
-  },
-  'protein-fold-1': {
+  'protein-fold': {
     title: '蛋白质折叠',
     description: '氨基酸链折叠成功能构象',
     category: 'biology',
   },
-  'protein-fold-2': {
-    title: '多肽折叠',
-    description: '氨基酸链折叠成功能构象',
-    category: 'biology',
-  },
-  'protein-fold-3': {
-    title: '结构域形成',
-    description: '氨基酸链折叠成功能构象',
-    category: 'biology',
-  },
-  'cell-membrane-1': {
+  'cell-membrane': {
     title: '细胞膜通道',
     description: '膜蛋白通道开闭转运',
     category: 'biology',
   },
-  'cell-membrane-2': {
-    title: '离子通道',
-    description: '膜蛋白通道开闭转运',
-    category: 'biology',
-  },
-  'cell-membrane-3': {
-    title: '膜运输',
-    description: '膜蛋白通道开闭转运',
-    category: 'biology',
-  },
-  'photosynthesis-1': {
+  'photosynthesis': {
     title: '光合作用',
     description: '光能转化学能循环',
     category: 'biology',
   },
-  'photosynthesis-2': {
-    title: '光反应',
-    description: '光能转化学能循环',
-    category: 'biology',
-  },
-  'photosynthesis-3': {
-    title: '碳固定',
-    description: '光能转化学能循环',
-    category: 'biology',
-  },
-  'neuron-pulse-1': {
+  'neuron-pulse': {
     title: '动作电位',
     description: '膜电位去极化复极化',
     category: 'biology',
   },
-  'neuron-pulse-2': {
-    title: '神经冲动',
-    description: '膜电位去极化复极化',
-    category: 'biology',
-  },
-  'neuron-pulse-3': {
-    title: '轴突传导',
-    description: '膜电位去极化复极化',
-    category: 'biology',
-  },
-  'heartbeat-ecg-1': {
+  'heartbeat-ecg': {
     title: '心电图',
     description: '心电 QRS 周期性搏动',
     category: 'biology',
   },
-  'heartbeat-ecg-2': {
-    title: '心室收缩',
-    description: '心电 QRS 周期性搏动',
-    category: 'biology',
-  },
-  'heartbeat-ecg-3': {
-    title: '脉搏节律',
-    description: '心电 QRS 周期性搏动',
-    category: 'biology',
-  },
-  'mitosis-1': {
+  'mitosis': {
     title: '有丝分裂',
     description: '细胞分裂周期推进',
     category: 'biology',
   },
-  'mitosis-2': {
-    title: '染色体分离',
-    description: '细胞分裂周期推进',
-    category: 'biology',
-  },
-  'mitosis-3': {
-    title: '胞质分裂',
-    description: '细胞分裂周期推进',
-    category: 'biology',
-  },
-  'virus-infect-1': {
+  'virus-infect': {
     title: '病毒感染',
     description: '病毒附着穿入复制',
     category: 'biology',
   },
-  'virus-infect-2': {
-    title: '病毒侵染',
-    description: '病毒附着穿入复制',
-    category: 'biology',
-  },
-  'virus-infect-3': {
-    title: '宿主入侵',
-    description: '病毒附着穿入复制',
-    category: 'biology',
-  },
-  'enzyme-bind-1': {
+  'enzyme-bind': {
     title: '酶促反应',
     description: '锁钥结合降低能垒',
     category: 'biology',
   },
-  'enzyme-bind-2': {
-    title: '酶底物复合',
-    description: '锁钥结合降低能垒',
-    category: 'biology',
-  },
-  'enzyme-bind-3': {
-    title: '催化循环',
-    description: '锁钥结合降低能垒',
-    category: 'biology',
-  },
-  'blood-flow-1': {
+  'blood-flow': {
     title: '血液循环',
     description: '心脏泵血循环全身',
     category: 'biology',
   },
-  'blood-flow-2': {
-    title: '动脉血流',
-    description: '心脏泵血循环全身',
-    category: 'biology',
-  },
-  'blood-flow-3': {
-    title: '毛细血管交换',
-    description: '心脏泵血循环全身',
-    category: 'biology',
-  },
-  'muscle-contract-1': {
+  'muscle-contract': {
     title: '肌肉收缩',
     description: '肌动肌球蛋白相对滑动',
     category: 'biology',
   },
-  'muscle-contract-2': {
-    title: '肌丝滑行',
-    description: '肌动肌球蛋白相对滑动',
-    category: 'biology',
-  },
-  'muscle-contract-3': {
-    title: '肌节缩短',
-    description: '肌动肌球蛋白相对滑动',
-    category: 'biology',
-  },
-  'bacteria-divide-1': {
+  'bacteria-divide': {
     title: '细菌分裂',
     description: '原核细胞一分为二',
     category: 'biology',
   },
-  'bacteria-divide-2': {
-    title: '二分裂',
-    description: '原核细胞一分为二',
-    category: 'biology',
-  },
-  'bacteria-divide-3': {
-    title: '菌群增殖',
-    description: '原核细胞一分为二',
-    category: 'biology',
-  },
-  'osmosis-1': {
+  'osmosis': {
     title: '渗透作用',
     description: '水沿浓度梯度跨膜',
     category: 'biology',
   },
-  'osmosis-2': {
-    title: '水分子跨膜',
-    description: '水沿浓度梯度跨膜',
-    category: 'biology',
-  },
-  'osmosis-3': {
-    title: '渗透平衡',
-    description: '水沿浓度梯度跨膜',
-    category: 'biology',
-  },
-  'bubble-sort-1': {
+  'bubble-sort': {
     title: '冒泡排序',
     description: '相邻元素比较交换',
     category: 'cs',
   },
-  'bubble-sort-2': {
-    title: '相邻交换',
-    description: '相邻元素比较交换',
-    category: 'cs',
-  },
-  'bubble-sort-3': {
-    title: '冒泡上浮',
-    description: '相邻元素比较交换',
-    category: 'cs',
-  },
-  'binary-search-1': {
+  'binary-search': {
     title: '二分查找',
     description: '区间折半逼近目标',
     category: 'cs',
   },
-  'binary-search-2': {
-    title: '折半搜索',
-    description: '区间折半逼近目标',
-    category: 'cs',
-  },
-  'binary-search-3': {
-    title: '有序查找',
-    description: '区间折半逼近目标',
-    category: 'cs',
-  },
-  'bfs-expand-1': {
+  'bfs-expand': {
     title: '广度优先',
     description: '逐层扩展搜索前沿',
     category: 'cs',
   },
-  'bfs-expand-2': {
-    title: 'BFS 扩散',
-    description: '逐层扩展搜索前沿',
-    category: 'cs',
-  },
-  'bfs-expand-3': {
-    title: '层序遍历',
-    description: '逐层扩展搜索前沿',
-    category: 'cs',
-  },
-  'dfs-path-1': {
+  'dfs-path': {
     title: '深度优先',
     description: '沿路径深入再回溯',
     category: 'cs',
   },
-  'dfs-path-2': {
-    title: 'DFS 回溯',
-    description: '沿路径深入再回溯',
-    category: 'cs',
-  },
-  'dfs-path-3': {
-    title: '栈式深入',
-    description: '沿路径深入再回溯',
-    category: 'cs',
-  },
-  'stack-push-1': {
+  'stack-push': {
     title: '栈操作',
     description: '元素压入弹出栈顶',
     category: 'cs',
   },
-  'stack-push-2': {
-    title: '压栈弹栈',
-    description: '元素压入弹出栈顶',
-    category: 'cs',
-  },
-  'stack-push-3': {
-    title: '后进先出',
-    description: '元素压入弹出栈顶',
-    category: 'cs',
-  },
-  'queue-flow-1': {
+  'queue-flow': {
     title: '队列操作',
     description: '队尾入队队首出队',
     category: 'cs',
   },
-  'queue-flow-2': {
-    title: '入队出队',
-    description: '队尾入队队首出队',
-    category: 'cs',
-  },
-  'queue-flow-3': {
-    title: '先进先出',
-    description: '队尾入队队首出队',
-    category: 'cs',
-  },
-  'hash-chain-1': {
+  'hash-chain': {
     title: '哈希表',
     description: '桶内链表处理冲突',
     category: 'cs',
   },
-  'hash-chain-2': {
-    title: '链地址法',
-    description: '桶内链表处理冲突',
-    category: 'cs',
-  },
-  'hash-chain-3': {
-    title: '冲突消解',
-    description: '桶内链表处理冲突',
-    category: 'cs',
-  },
-  'recursion-tree-1': {
+  'recursion-tree': {
     title: '递归树',
     description: '递归调用树形展开',
     category: 'cs',
   },
-  'recursion-tree-2': {
-    title: '分治递归',
-    description: '递归调用树形展开',
-    category: 'cs',
-  },
-  'recursion-tree-3': {
-    title: '调用栈展开',
-    description: '递归调用树形展开',
-    category: 'cs',
-  },
-  'heapify-1': {
+  'heapify': {
     title: '堆化',
     description: '节点下沉上浮维护堆',
     category: 'cs',
   },
-  'heapify-2': {
-    title: '优先队列',
-    description: '节点下沉上浮维护堆',
-    category: 'cs',
-  },
-  'heapify-3': {
-    title: '堆调整',
-    description: '节点下沉上浮维护堆',
-    category: 'cs',
-  },
-  'graph-edge-1': {
+  'graph-edge': {
     title: '图遍历',
     description: '边权逐步松弛更新',
     category: 'cs',
   },
-  'graph-edge-2': {
-    title: '边松弛',
-    description: '边权逐步松弛更新',
-    category: 'cs',
-  },
-  'graph-edge-3': {
-    title: '最短路径',
-    description: '边权逐步松弛更新',
-    category: 'cs',
-  },
-  'linked-list-1': {
+  'linked-list': {
     title: '链表',
     description: '节点指针串联遍历',
     category: 'cs',
   },
-  'linked-list-2': {
-    title: '指针链接',
-    description: '节点指针串联遍历',
-    category: 'cs',
-  },
-  'linked-list-3': {
-    title: '节点插入',
-    description: '节点指针串联遍历',
-    category: 'cs',
-  },
-  'cache-line-1': {
+  'cache-line': {
     title: '缓存命中',
     description: '命中与逐出交替',
     category: 'cs',
   },
-  'cache-line-2': {
-    title: 'LRU 替换',
-    description: '命中与逐出交替',
-    category: 'cs',
-  },
-  'cache-line-3': {
-    title: '缓存行',
-    description: '命中与逐出交替',
-    category: 'cs',
-  },
-  'neural-net-1': {
+  'neural-net': {
     title: '神经网络',
-    description: '层间信号前向流动',
-    category: 'cs',
-  },
-  'neural-net-2': {
-    title: '前向传播',
-    description: '层间信号前向流动',
-    category: 'cs',
-  },
-  'neural-net-3': {
-    title: '反向梯度',
     description: '层间信号前向流动',
     category: 'cs',
   },
@@ -1657,138 +1377,48 @@ export const ICON_META: Record<string, Omit<IconMeta, 'name'>> = {
     description: '分支合并提交',
     category: 'cs',
   },
-  'prism-1': {
+  'prism': {
     title: '棱镜色散',
     description: '不同波长折射角分离',
     category: 'optics',
   },
-  'prism-2': {
-    title: '白光色散',
-    description: '不同波长折射角分离',
-    category: 'optics',
-  },
-  'prism-3': {
-    title: '折射分光',
-    description: '不同波长折射角分离',
-    category: 'optics',
-  },
-  'grating-1': {
+  'grating': {
     title: '光栅衍射',
     description: '光栅多缝干涉图样',
     category: 'optics',
   },
-  'grating-2': {
-    title: '衍射条纹',
-    description: '光栅多缝干涉图样',
-    category: 'optics',
-  },
-  'grating-3': {
-    title: '夫琅禾费衍射',
-    description: '光栅多缝干涉图样',
-    category: 'optics',
-  },
-  'lens-1': {
+  'lens': {
     title: '凸透镜',
     description: '平行光汇聚于焦点',
     category: 'optics',
   },
-  'lens-2': {
-    title: '透镜成像',
-    description: '平行光汇聚于焦点',
-    category: 'optics',
-  },
-  'lens-3': {
-    title: '焦点汇聚',
-    description: '平行光汇聚于焦点',
-    category: 'optics',
-  },
-  'mirror-1': {
+  'mirror': {
     title: '凹面镜',
     description: '反射光线汇聚',
     category: 'optics',
   },
-  'mirror-2': {
-    title: '反射聚焦',
-    description: '反射光线汇聚',
-    category: 'optics',
-  },
-  'mirror-3': {
-    title: '镜面成像',
-    description: '反射光线汇聚',
-    category: 'optics',
-  },
-  'polar-1': {
+  'polar': {
     title: '偏振光',
     description: '偏振方向选择性透过',
     category: 'optics',
   },
-  'polar-2': {
-    title: '偏振片旋转',
-    description: '偏振方向选择性透过',
-    category: 'optics',
-  },
-  'polar-3': {
-    title: '马吕斯定律',
-    description: '偏振方向选择性透过',
-    category: 'optics',
-  },
-  'laser-1': {
+  'laser': {
     title: '激光腔',
     description: '腔内光来回放大',
     category: 'optics',
   },
-  'laser-2': {
-    title: '受激辐射',
-    description: '腔内光来回放大',
-    category: 'optics',
-  },
-  'laser-3': {
-    title: '激光振荡',
-    description: '腔内光来回放大',
-    category: 'optics',
-  },
-  'fiber-1': {
+  'fiber': {
     title: '光纤传输',
     description: '纤芯全反射导光',
     category: 'optics',
   },
-  'fiber-2': {
-    title: '全反射导光',
-    description: '纤芯全反射导光',
-    category: 'optics',
-  },
-  'fiber-3': {
-    title: '光导纤维',
-    description: '纤芯全反射导光',
-    category: 'optics',
-  },
-  'interf-ring-1': {
+  'interf-ring': {
     title: '等倾干涉',
     description: '同心干涉环明暗',
     category: 'optics',
   },
-  'interf-ring-2': {
-    title: '牛顿环',
-    description: '同心干涉环明暗',
-    category: 'optics',
-  },
-  'interf-ring-3': {
-    title: '薄膜干涉',
-    description: '同心干涉环明暗',
-    category: 'optics',
-  },
-  'thin-film-1': {
+  'thin-film': {
     title: '增透膜',
-    description: '膜厚控制反射相位',
-    category: 'optics',
-  },
-  'thin-film-2': {
-    title: '薄膜相位',
-    description: '膜厚控制反射相位',
-    category: 'optics',
-  },
-  'thin-film-3': {
-    title: '多层膜',
     description: '膜厚控制反射相位',
     category: 'optics',
   },
@@ -1807,138 +1437,48 @@ export const ICON_META: Record<string, Omit<IconMeta, 'name'>> = {
     description: '分束干涉仪',
     category: 'optics',
   },
-  'plate-1': {
+  'plate': {
     title: '板块俯冲',
     description: '板块碰撞俯冲消减',
     category: 'earth',
   },
-  'plate-2': {
-    title: '俯冲带',
-    description: '板块碰撞俯冲消减',
-    category: 'earth',
-  },
-  'plate-3': {
-    title: '大洋板块',
-    description: '板块碰撞俯冲消减',
-    category: 'earth',
-  },
-  'volcano-1': {
+  'volcano': {
     title: '火山喷发',
     description: '岩浆喷出与碎屑',
     category: 'earth',
   },
-  'volcano-2': {
-    title: '岩浆喷发',
-    description: '岩浆喷出与碎屑',
-    category: 'earth',
-  },
-  'volcano-3': {
-    title: '火山口',
-    description: '岩浆喷出与碎屑',
-    category: 'earth',
-  },
-  'seismic-1': {
+  'seismic': {
     title: '地震波',
     description: '体波与面波传播',
     category: 'earth',
   },
-  'seismic-2': {
-    title: 'P 波传播',
-    description: '体波与面波传播',
-    category: 'earth',
-  },
-  'seismic-3': {
-    title: 'S 波横波',
-    description: '体波与面波传播',
-    category: 'earth',
-  },
-  'front-1': {
+  'front': {
     title: '冷锋过境',
     description: '冷暖空气交界推进',
     category: 'earth',
   },
-  'front-2': {
-    title: '暖锋抬升',
-    description: '冷暖空气交界推进',
-    category: 'earth',
-  },
-  'front-3': {
-    title: '锋面雨带',
-    description: '冷暖空气交界推进',
-    category: 'earth',
-  },
-  'hurricane-1': {
+  'hurricane': {
     title: '飓风眼',
     description: '低压气旋旋转结构',
     category: 'earth',
   },
-  'hurricane-2': {
-    title: '气旋旋转',
-    description: '低压气旋旋转结构',
-    category: 'earth',
-  },
-  'hurricane-3': {
-    title: '台风涡旋',
-    description: '低压气旋旋转结构',
-    category: 'earth',
-  },
-  'ocean-1': {
+  'ocean': {
     title: '洋流环流',
     description: '海水大规模环流',
     category: 'earth',
   },
-  'ocean-2': {
-    title: '赤道环流',
-    description: '海水大规模环流',
-    category: 'earth',
-  },
-  'ocean-3': {
-    title: '温盐环流',
-    description: '海水大规模环流',
-    category: 'earth',
-  },
-  'glacier-1': {
+  'glacier': {
     title: '冰川运动',
     description: '重力驱动冰体缓慢流动',
     category: 'earth',
   },
-  'glacier-2': {
-    title: '冰河推进',
-    description: '重力驱动冰体缓慢流动',
-    category: 'earth',
-  },
-  'glacier-3': {
-    title: '冰舌延伸',
-    description: '重力驱动冰体缓慢流动',
-    category: 'earth',
-  },
-  'season-1': {
+  'season': {
     title: '四季成因',
     description: '地轴倾角导致季节',
     category: 'earth',
   },
-  'season-2': {
-    title: '地轴倾斜',
-    description: '地轴倾角导致季节',
-    category: 'earth',
-  },
-  'season-3': {
-    title: '日照变化',
-    description: '地轴倾角导致季节',
-    category: 'earth',
-  },
-  'fault-1': {
+  'fault': {
     title: '断层滑动',
-    description: '岩层沿断层面错动',
-    category: 'earth',
-  },
-  'fault-2': {
-    title: '走滑断层',
-    description: '岩层沿断层面错动',
-    category: 'earth',
-  },
-  'fault-3': {
-    title: '地震断层',
     description: '岩层沿断层面错动',
     category: 'earth',
   },
@@ -1952,123 +1492,43 @@ export const ICON_META: Record<string, Omit<IconMeta, 'name'>> = {
     description: '降水地表汇流',
     category: 'earth',
   },
-  'metronome-1': {
+  'metronome': {
     title: '节拍器',
     description: '摆锤左右稳定节拍',
     category: 'music',
   },
-  'metronome-2': {
-    title: '稳定节拍',
-    description: '摆锤左右稳定节拍',
-    category: 'music',
-  },
-  'metronome-3': {
-    title: '节奏器',
-    description: '摆锤左右稳定节拍',
-    category: 'music',
-  },
-  'string-harm-1': {
+  'string-harm': {
     title: '弦乐泛音',
     description: '弦上驻波与泛音列',
     category: 'music',
   },
-  'string-harm-2': {
-    title: '驻波泛音',
-    description: '弦上驻波与泛音列',
-    category: 'music',
-  },
-  'string-harm-3': {
-    title: '弦振动',
-    description: '弦上驻波与泛音列',
-    category: 'music',
-  },
-  'drum-1': {
+  'drum': {
     title: '鼓点节奏',
     description: '周期性敲击脉冲',
     category: 'music',
   },
-  'drum-2': {
-    title: '打击节拍',
-    description: '周期性敲击脉冲',
-    category: 'music',
-  },
-  'drum-3': {
-    title: '底鼓脉冲',
-    description: '周期性敲击脉冲',
-    category: 'music',
-  },
-  'tube-1': {
+  'tube': {
     title: '管乐共振',
     description: '管中驻波共振模',
     category: 'music',
   },
-  'tube-2': {
-    title: '开管闭管',
-    description: '管中驻波共振模',
-    category: 'music',
-  },
-  'tube-3': {
-    title: '气柱共振',
-    description: '管中驻波共振模',
-    category: 'music',
-  },
-  'piano-1': {
+  'piano': {
     title: '钢琴击弦',
     description: '琴锤击弦发声',
     category: 'music',
   },
-  'piano-2': {
-    title: '琴键击弦',
-    description: '琴锤击弦发声',
-    category: 'music',
-  },
-  'piano-3': {
-    title: '锤击琴弦',
-    description: '琴锤击弦发声',
-    category: 'music',
-  },
-  'spectrum-1': {
+  'spectrum': {
     title: '频谱瀑布',
     description: '频率成分随时间分布',
     category: 'music',
   },
-  'spectrum-2': {
-    title: '频谱分析',
-    description: '频率成分随时间分布',
-    category: 'music',
-  },
-  'spectrum-3': {
-    title: '音色频谱',
-    description: '频率成分随时间分布',
-    category: 'music',
-  },
-  'vibrato-1': {
+  'vibrato': {
     title: '揉弦颤音',
     description: '音高周期性微扰',
     category: 'music',
   },
-  'vibrato-2': {
-    title: '音高颤动',
-    description: '音高周期性微扰',
-    category: 'music',
-  },
-  'vibrato-3': {
-    title: '颤音效果',
-    description: '音高周期性微扰',
-    category: 'music',
-  },
-  'beat-mix-1': {
+  'beat-mix': {
     title: '拍频合成',
-    description: '相近频率合成拍频',
-    category: 'music',
-  },
-  'beat-mix-2': {
-    title: '双音拍频',
-    description: '相近频率合成拍频',
-    category: 'music',
-  },
-  'beat-mix-3': {
-    title: '拍音',
     description: '相近频率合成拍频',
     category: 'music',
   },
@@ -2077,123 +1537,43 @@ export const ICON_META: Record<string, Omit<IconMeta, 'name'>> = {
     description: '指挥挥拍',
     category: 'music',
   },
-  'four-bar-1': {
+  'four-bar': {
     title: '四连杆',
     description: '四杆闭环传动',
     category: 'engineering',
   },
-  'four-bar-2': {
-    title: '曲柄摇杆',
-    description: '四杆闭环传动',
-    category: 'engineering',
-  },
-  'four-bar-3': {
-    title: '连杆机构',
-    description: '四杆闭环传动',
-    category: 'engineering',
-  },
-  'cam-1': {
+  'cam': {
     title: '凸轮机构',
     description: '凸轮推动从动件',
     category: 'engineering',
   },
-  'cam-2': {
-    title: '凸轮从动',
-    description: '凸轮推动从动件',
-    category: 'engineering',
-  },
-  'cam-3': {
-    title: '轮廓传动',
-    description: '凸轮推动从动件',
-    category: 'engineering',
-  },
-  'piston-1': {
+  'piston': {
     title: '活塞冲程',
     description: '活塞往复四冲程',
     category: 'engineering',
   },
-  'piston-2': {
-    title: '内燃冲程',
-    description: '活塞往复四冲程',
-    category: 'engineering',
-  },
-  'piston-3': {
-    title: '往复运动',
-    description: '活塞往复四冲程',
-    category: 'engineering',
-  },
-  'gear-1': {
+  'gear': {
     title: '齿轮传动',
     description: '齿面啮合传递转速',
     category: 'engineering',
   },
-  'gear-2': {
-    title: '齿轮啮合',
-    description: '齿面啮合传递转速',
-    category: 'engineering',
-  },
-  'gear-3': {
-    title: '齿比传动',
-    description: '齿面啮合传递转速',
-    category: 'engineering',
-  },
-  'bridge-1': {
+  'bridge': {
     title: '桥梁振动',
     description: '结构弯曲振动模态',
     category: 'engineering',
   },
-  'bridge-2': {
-    title: '悬索振动',
-    description: '结构弯曲振动模态',
-    category: 'engineering',
-  },
-  'bridge-3': {
-    title: '共振模态',
-    description: '结构弯曲振动模态',
-    category: 'engineering',
-  },
-  'crane-1': {
+  'crane': {
     title: '塔吊回转',
     description: '起重臂回转吊运',
     category: 'engineering',
   },
-  'crane-2': {
-    title: '起重臂',
-    description: '起重臂回转吊运',
-    category: 'engineering',
-  },
-  'crane-3': {
-    title: '吊装回转',
-    description: '起重臂回转吊运',
-    category: 'engineering',
-  },
-  'conveyor-1': {
+  'conveyor': {
     title: '传送带',
     description: '皮带连续输送物料',
     category: 'engineering',
   },
-  'conveyor-2': {
-    title: '皮带输送',
-    description: '皮带连续输送物料',
-    category: 'engineering',
-  },
-  'conveyor-3': {
-    title: '物料输送',
-    description: '皮带连续输送物料',
-    category: 'engineering',
-  },
-  'turbine-1': {
+  'turbine': {
     title: '涡轮叶片',
-    description: '流体推动叶轮旋转',
-    category: 'engineering',
-  },
-  'turbine-2': {
-    title: '叶轮旋转',
-    description: '流体推动叶轮旋转',
-    category: 'engineering',
-  },
-  'turbine-3': {
-    title: '水轮机',
     description: '流体推动叶轮旋转',
     category: 'engineering',
   },

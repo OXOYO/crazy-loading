@@ -1,7 +1,7 @@
 import type { IconCategory, IconDefinition, TemplateName } from './types.ts';
 import { EXPANSION_CATALOG } from './catalog-expansion.ts';
 
-// preserved 26 + qian-xuesen 1 + generated batch 173 + chemistry 10 + extension 12 + sports 24 + expansion 254 = 500
+// preserved 26 + qian-xuesen 1 + generated batch 173 + chemistry 10 + extension 12 + sports 24 + expansion 130 = 376
 
 function icon(
   id: string,
@@ -520,8 +520,10 @@ export const ICON_CATALOG: IconDefinition[] = applyCatalogFixes([
   ...EXPANSION_CATALOG,
 ]);
 
-if (ICON_CATALOG.length !== 500) {
-  throw new Error(`ICON_CATALOG must contain 500 icons, got ${ICON_CATALOG.length}`);
+const ICON_CATALOG_TARGET = 376;
+
+if (ICON_CATALOG.length !== ICON_CATALOG_TARGET) {
+  throw new Error(`ICON_CATALOG must contain ${ICON_CATALOG_TARGET} icons, got ${ICON_CATALOG.length}`);
 }
 
 export const PRESERVED_HAND_ICONS = PRESERVED_IDS;

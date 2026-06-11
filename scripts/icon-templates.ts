@@ -15,18 +15,8 @@ function dur(def: IconDefinition, base = 1.6): number {
   return Number((base + (s % 7) * 0.15).toFixed(2));
 }
 
-/** 扩展批次（seed≥364）注入微小结构差异，避免共用模板被判定为完全重复 */
-function withSeedVariation(svg: string, def: IconDefinition): string {
-  const s = def.seed ?? 0;
-  if (s < 364) {
-    return svg;
-  }
-  const mark = `<circle cx="${7 + (s % 9)}" cy="${17 + (s % 5)}" r="${(0.3 + (s % 4) * 0.1).toFixed(2)}" fill="currentColor" opacity="${(0.12 + (s % 3) * 0.06).toFixed(2)}"/>`;
-  return svg.replace('</svg>', `${mark}</svg>`);
-}
-
 export function renderIcon(def: IconDefinition): string {
-  return withSeedVariation(renderIconBody(def), def);
+  return renderIconBody(def);
 }
 
 function renderIconBody(def: IconDefinition): string {

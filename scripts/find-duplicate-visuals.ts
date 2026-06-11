@@ -71,7 +71,7 @@ async function main() {
     const canonical = ids[0];
     for (const id of ids.slice(1)) {
       const def = ICON_CATALOG.find((x) => x.id === id)!;
-      if (!OVERRIDE_ICON_IDS.has(id) && (def.seed ?? 0) < 364) {
+      if (!OVERRIDE_ICON_IDS.has(id)) {
         missingOverrides.push(`${id} (模板 ${def.template}, 基准 ${canonical})`);
       }
     }
