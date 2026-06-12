@@ -3,7 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var themeKey = 'crazy-loading-theme';
+        var localeKey = 'crazy-loading-locale';
+        var theme = 'dark';
+
+        try {
+          var storedTheme = localStorage.getItem(themeKey);
+          if (storedTheme === 'light' || storedTheme === 'dark') {
+            theme = storedTheme;
+          } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            theme = 'light';
+          }
+        } catch (error) {
+          /* ignore */
+        }
+
+        document.documentElement.dataset.theme = theme;
+
+        var locale = 'zh';
+        try {
+          var storedLocale = localStorage.getItem(localeKey);
+          if (storedLocale === 'zh' || storedLocale === 'en') {
+            locale = storedLocale;
+          } else if ((navigator.language || '').toLowerCase().indexOf('zh') !== 0) {
+            locale = 'en';
+          }
+        } catch (error) {
+          /* ignore */
+        }
+
+        document.documentElement.lang = locale === 'zh' ? 'zh-CN' : 'en';
+        document.documentElement.dataset.favicon = theme;
+      })();
+    </script>
+    <link rel="icon" href="favicon-dark.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        var theme = document.documentElement.dataset.favicon || 'dark';
+        var favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) {
+          favicon.href = theme === 'light' ? 'favicon-light.svg' : 'favicon-dark.svg';
+        }
+      })();
+    </script>
     <title>Crazy Loading Playground</title>
   </head>
   <body>

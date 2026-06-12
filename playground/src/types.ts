@@ -14,6 +14,12 @@ export const DEFAULT_CONFIG: LoadingConfig = {
   opacity: 1,
 };
 
+export function isDefaultConfig(config: LoadingConfig): boolean {
+  return (Object.keys(DEFAULT_CONFIG) as (keyof LoadingConfig)[]).every(
+    (key) => config[key] === DEFAULT_CONFIG[key],
+  );
+}
+
 import type { IconCategory } from './data/categories';
 
 export interface IconMeta {

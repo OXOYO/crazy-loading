@@ -59,7 +59,7 @@ async function build() {
     total: iconNames.length,
     author: {
       name: 'crazy-loading',
-      url: 'https://github.com/crazy-loading/crazy-loading',
+      url: 'https://github.com/OXOYO/crazy-loading',
     },
     license: {
       title: 'MIT',

@@ -1,6 +1,6 @@
 {
 	"prefix": "crazy-loading",
-	"lastModified": 1781180079,
+	"lastModified": 1781255490,
 	"icons": {
 		"accretion-disk": {
 			"body": "<style>.d{fill:none;stroke:currentColor;stroke-width:1.5;stroke-dasharray:16;animation:sp 1.6s linear infinite}.c{fill:currentColor}@keyframes sp{0%{stroke-dashoffset:16}100%{stroke-dashoffset:-16}}</style><circle class=\"c\" cx=\"12\" cy=\"12\" r=\"2\"/><ellipse class=\"d\" cx=\"12\" cy=\"12\" rx=\"9\" ry=\"3\"/>"
@@ -1138,7 +1138,7 @@
 		"total": 376,
 		"author": {
 			"name": "crazy-loading",
-			"url": "https://github.com/crazy-loading/crazy-loading"
+			"url": "https://github.com/OXOYO/crazy-loading"
 		},
 		"license": {
 			"title": "MIT",

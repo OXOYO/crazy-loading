@@ -23,7 +23,9 @@
     "check:effects": "npm run check:duplicates && npm run check:clipping && npm run check:animation-duration && npm run check:animation-loss && npm run check:fidelity",
     "dev": "npm run build:icons && npm run dev -w playground",
     "build": "npm run build:icons && npm run build -w playground",
-    "preview": "npm run preview -w playground"
+    "build:pages": "GITHUB_PAGES=true GITHUB_REPOSITORY=OXOYO/crazy-loading npm run build",
+    "preview": "npm run preview -w playground",
+    "preview:pages": "npm run build:pages && npm run preview -w playground"
   },
   "devDependencies": {
     "@iconify/tools": "^5.0.5",

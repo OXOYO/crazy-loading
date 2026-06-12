@@ -1,7 +1,17 @@
 import type { IconifyIcon } from '@iconify/types';
+import { listIconNames } from './icons';
 import type { LoadingConfig } from '../types';
 
+/** 保守估计，避免 IE / 部分网关对超长 query 的限制 */
+const SHARE_URL_SAFE_LENGTH = 1800;
+
+const ICON_NAMES = listIconNames();
+const ICON_INDEX = new Map(ICON_NAMES.map((name, index) => [name, index]));
+
 const PREFIX = 'crazy-loading';
+
+/** 业务项目中建议放置 Playground 导出的 Iconify JSON 路径 */
+export const LOCAL_ICONS_JSON_PATH = './assets/crazy-loading.json';
 
 function sanitizeScope(scope: string): string {
   return scope.replace(/[^a-zA-Z0-9_-]/g, '-');
@@ -137,7 +147,11 @@ export function buildIconifyName(iconName: string): string {
 }
 
 export function buildReactSnippet(iconName: string, config: LoadingConfig): string {
-  return `import { Icon } from '@iconify/react';
+  return `import { Icon, addCollection } from '@iconify/react';
+// Playground「图标集导出」生成的 JSON，例如：
+import icons from '${LOCAL_ICONS_JSON_PATH}';
+
+addCollection(icons);
 
 export function Loading() {
   return (
@@ -150,8 +164,41 @@ export function Loading() {
 }`;
 }
 
-export function buildHtmlSnippet(iconName: string, config: LoadingConfig): string {
+export function buildVueSnippet(iconName: string, config: LoadingConfig): string {
+  return `<script setup>
+import { Icon, addCollection } from '@iconify/vue';
+// Playground「图标集导出」生成的 JSON，例如：
+import icons from '${LOCAL_ICONS_JSON_PATH}';
+
+addCollection(icons);
+</script>
+
+<template>
+  <Icon
+    icon="${buildIconifyName(iconName)}"
+    :width="${config.size}"
+    :style="{ color: '${config.color}', opacity: ${config.opacity} }"
+  />
+</template>`;
+}
+
+export function buildHtmlSnippet(
+  iconName: string,
+  config: LoadingConfig,
+  iconBody: string,
+): string {
+  const collection = JSON.stringify({
+    prefix: PREFIX,
+    icons: {
+      [iconName]: { body: iconBody },
+    },
+  });
+
   return `<script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+<script>
+  // 自定义图标集：注册本地数据（下方为当前图标；全量请在 Playground 勾选后导出 JSON）
+  Iconify.addCollection(${collection});
+</script>
 <iconify-icon
   icon="${buildIconifyName(iconName)}"
   width="${config.size}"
@@ -159,21 +206,115 @@ export function buildHtmlSnippet(iconName: string, config: LoadingConfig): strin
 ></iconify-icon>`;
 }
 
+function appendConfigParams(params: URLSearchParams, config: LoadingConfig): void {
+  params.set('color', config.color);
+  params.set('size', String(config.size));
+  params.set('duration', String(config.duration));
+  params.set('stroke', String(config.strokeWidth));
+  params.set('opacity', String(config.opacity));
+}
+
 export function buildShareUrl(iconName: string, config: LoadingConfig): string {
-  const params = new URLSearchParams({
-    icon: iconName,
-    color: config.color,
-    size: String(config.size),
-    duration: String(config.duration),
-    stroke: String(config.strokeWidth),
-    opacity: String(config.opacity),
-  });
+  const params = new URLSearchParams({ icon: iconName });
+  appendConfigParams(params, config);
   return `${window.location.origin}${window.location.pathname}?${params.toString()}`;
 }
 
-export function parseShareUrl(): Partial<LoadingConfig & { icon: string }> {
+function bytesToBase64Url(bytes: Uint8Array): string {
+  let binary = '';
+  for (const byte of bytes) {
+    binary += String.fromCharCode(byte);
+  }
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/u, '');
+}
+
+function base64UrlToBytes(encoded: string): Uint8Array {
+  const padded = encoded.replace(/-/g, '+').replace(/_/g, '/');
+  const padLength = (4 - (padded.length % 4)) % 4;
+  const base64 = padded + '='.repeat(padLength);
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return bytes;
+}
+
+function encodePickIndices(pickedIcons: string[]): string {
+  const indices = [
+    ...new Set(
+      pickedIcons
+        .map((name) => ICON_INDEX.get(name))
+        .filter((index): index is number => index !== undefined),
+    ),
+  ].sort((a, b) => a - b);
+
+  const bytes = new Uint8Array(indices.length * 2);
+  const view = new DataView(bytes.buffer);
+  indices.forEach((index, offset) => {
+    view.setUint16(offset * 2, index, false);
+  });
+  return bytesToBase64Url(bytes);
+}
+
+function decodePickIndices(encoded: string): string[] {
+  try {
+    const bytes = base64UrlToBytes(encoded);
+    if (bytes.length % 2 !== 0) {
+      return [];
+    }
+
+    const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+    const names: string[] = [];
+    for (let offset = 0; offset < bytes.length; offset += 2) {
+      const index = view.getUint16(offset, false);
+      const name = ICON_NAMES[index];
+      if (name) {
+        names.push(name);
+      }
+    }
+    return names;
+  } catch {
+    return [];
+  }
+}
+
+function buildCollectionSharePath(pickedIcons: string[], config: LoadingConfig): string {
+  const baseParams = new URLSearchParams();
+  if (pickedIcons[0]) {
+    baseParams.set('icon', pickedIcons[0]);
+  }
+  appendConfigParams(baseParams, config);
+
+  const plainParams = new URLSearchParams(baseParams);
+  plainParams.set('pick', pickedIcons.join(','));
+  const plainPath = `?${plainParams.toString()}`;
+  if (plainPath.length <= SHARE_URL_SAFE_LENGTH) {
+    return plainPath;
+  }
+
+  const compactParams = new URLSearchParams(baseParams);
+  compactParams.set('picki', encodePickIndices(pickedIcons));
+  return `?${compactParams.toString()}`;
+}
+
+export function buildCollectionShareUrl(pickedIcons: string[], config: LoadingConfig): string {
+  return `${window.location.origin}${window.location.pathname}${buildCollectionSharePath(pickedIcons, config)}`;
+}
+
+export function isCollectionShareUrlTooLong(pickedIcons: string[], config: LoadingConfig): boolean {
+  const path = buildCollectionSharePath(pickedIcons, config);
+  return `${window.location.origin}${window.location.pathname}${path}`.length > SHARE_URL_SAFE_LENGTH;
+}
+
+export interface ShareUrlState extends Partial<LoadingConfig> {
+  icon?: string;
+  pick?: string[];
+}
+
+export function parseShareUrl(): ShareUrlState {
   const params = new URLSearchParams(window.location.search);
-  const result: Partial<LoadingConfig & { icon: string }> = {};
+  const result: ShareUrlState = {};
 
   const icon = params.get('icon');
   if (icon) {
@@ -203,6 +344,19 @@ export function parseShareUrl(): Partial<LoadingConfig & { icon: string }> {
   const opacity = params.get('opacity');
   if (opacity) {
     result.opacity = Number(opacity);
+  }
+
+  const pickIndices = params.get('picki');
+  if (pickIndices) {
+    result.pick = decodePickIndices(pickIndices);
+  } else {
+    const pick = params.get('pick');
+    if (pick) {
+      result.pick = pick
+        .split(',')
+        .map((name) => name.trim())
+        .filter(Boolean);
+    }
   }
 
   return result;
